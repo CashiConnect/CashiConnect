@@ -4,17 +4,18 @@ import { AppService } from './app.service.js';
 import { AuthModule } from './auth/auth.module.js';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { RolesModule } from './roles/roles.module.js';
+import { UsersModule } from './users/users.module.js';
 
 @Module({
   imports: [AuthModule,
 
-
-    // Load environment variables globally
+   
     ConfigModule.forRoot({
       isGlobal: true,
     }),
 
-    // PostgreSQL connection
+    
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -32,6 +33,12 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         synchronize: true,
       }),
     }),
+
+    
+    RolesModule,
+
+    
+    UsersModule,
 
 
 
