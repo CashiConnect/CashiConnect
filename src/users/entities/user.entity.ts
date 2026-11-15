@@ -1,23 +1,16 @@
-import {
-  Entity,
-  PrimaryGeneratedColumn,
-  Column,
-  ManyToOne,
-  JoinColumn,
-  CreateDateColumn,
-  UpdateDateColumn,
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn, CreateDateColumn,
+  UpdateDateColumn
 } from 'typeorm';
-
+import { Exclude } from 'class-transformer';
 import { Role } from '../../roles/entities/roles.entity.js';
+
 
 @Entity('users')
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => Role, (role) => role.users, {
-    nullable: false,
-  })
+  @ManyToOne(() => Role, (role) => role.users, { nullable: false, onDelete: 'RESTRICT' })
   @JoinColumn({ name: 'role_id' })
   role: Role;
 
@@ -27,6 +20,7 @@ export class User {
   @Column({ unique: true, length: 150 })
   email: string;
 
+  @Exclude()
   @Column({ length: 255 })
   password: string;
 
