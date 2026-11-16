@@ -12,8 +12,9 @@ import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard.js';
 import { CreateFarmerProfileDto } from './dto/create-farmer_profile.dto.js';
 import { FarmerProfilesService } from './farmer_profiles.service.js';
 import { UpdateFarmerProfileDto } from './dto/update-farmer_profile.dto.js';
-import { promises } from 'dns';
 import { FarmerProfile } from './entities/farmer_profile.entity.js';
+import { FarmerOnly } from '../../common/decorators/roles.decorator.js';
+import { RolesGuard } from '../../common/guards/roles.guard.js';
 
 type AuthenticatedRequest = Request & {
   user: {
@@ -24,7 +25,8 @@ type AuthenticatedRequest = Request & {
 };
 
 @Controller('farmer-profiles')
-@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
+@FarmerOnly()
 export class FarmerProfilesController {
   constructor(
     private readonly farmerProfilesService: FarmerProfilesService,
