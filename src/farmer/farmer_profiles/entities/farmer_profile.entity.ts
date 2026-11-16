@@ -2,12 +2,15 @@ import {
     Column,
     CreateDateColumn,
     Entity,
+    OneToMany,
     PrimaryGeneratedColumn,
     UpdateDateColumn,
 } from 'typeorm';
+import { FarmingProjects } from '../../farming_projects/entities/farming_projects.entity.js';
 
 @Entity('farmer_profiles')
 export class FarmerProfile{
+    [x: string]: any;
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -40,4 +43,7 @@ export class FarmerProfile{
     created_at: Date;
     @UpdateDateColumn()
     updated_at: Date;
+
+    @OneToMany(()=>FarmingProjects,(farmingProjects)=>farmingProjects.farmerProfile,{eager: true})
+    farmingProjects: FarmingProjects[];
 }
