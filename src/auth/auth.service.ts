@@ -1,23 +1,16 @@
-import {
-  Injectable,
-  ConflictException,
-  UnauthorizedException,
-  BadRequestException,
-  Logger,
-} from '@nestjs/common';
+import { Injectable, ConflictException, UnauthorizedException, BadRequestException, Logger,
+ NotFoundException } from '@nestjs/common';
 
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-
 import { User } from '../users/entities/user.entity.js';
 import { Role } from '../roles/entities/roles.entity.js';
-
 import { RegisterDto } from './dto/register.dto.js';
 import { LoginDto } from './dto/login.dto.js';
-
 import { JwtService } from '@nestjs/jwt';
 import { MailerService } from '@nestjs-modules/mailer';
 import * as bcrypt from 'bcrypt';
+
 
 @Injectable()
 export class AuthService {
@@ -35,7 +28,9 @@ export class AuthService {
     private readonly mailerService: MailerService,
   ) {}
 
-  // REGISTER
+
+
+
   async register(dto: RegisterDto) {
     const existingUser = await this.userRepository.findOne({
       where: [
@@ -103,7 +98,9 @@ export class AuthService {
     };
   }
 
-  // LOGIN
+
+
+
   async login(dto: LoginDto) {
     const user = await this.userRepository.findOne({
       where: { email: dto.email },
@@ -158,4 +155,29 @@ export class AuthService {
       },
     };
   }
+
+
+  
+
+   async getMe(userId: number) {
+    const user = await this.userRepository.findOne({
+      where: { id: userId },
+      relations: { role: true },
+    });
+
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+
+    return {
+      id: user.id,
+      full_name: user.full_name,
+      email: user.email,
+      phone: user.phone,
+      status: user.status,
+      role: user.role.name,
+      created_at: user.created_at,
+    };
+  }
+
 }
