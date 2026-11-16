@@ -3,6 +3,7 @@ import {
   ConflictException,
   UnauthorizedException,
   BadRequestException,
+  Logger,
 } from '@nestjs/common';
 
 import { InjectRepository } from '@nestjs/typeorm';
@@ -15,10 +16,13 @@ import { RegisterDto } from './dto/register.dto.js';
 import { LoginDto } from './dto/login.dto.js';
 
 import { JwtService } from '@nestjs/jwt';
+import { MailerService } from '@nestjs-modules/mailer';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
+  private readonly logger = new Logger(AuthService.name);
+
   constructor(
     @InjectRepository(User)
     private userRepository: Repository<User>,
@@ -27,6 +31,8 @@ export class AuthService {
     private roleRepository: Repository<Role>,
 
     private jwtService: JwtService,
+
+    private readonly mailerService: MailerService,
   ) {}
 
   // REGISTER
@@ -67,6 +73,23 @@ export class AuthService {
     });
 
     const savedUser = await this.userRepository.save(user);
+
+    try {
+      await this.mailerService.sendMail({
+        to: savedUser.email,
+        subject: 'Welcome to CashiConnect',
+        template: 'welcome',
+        context: {
+          fullName: savedUser.full_name,
+          role: role.name,
+        },
+      });
+    } catch (error) {
+      this.logger.error(
+        `Welcome email could not be sent to ${savedUser.email}`,
+        error instanceof Error ? error.stack : String(error),
+      );
+    }
 
     return {
       message: 'Registration successful',
