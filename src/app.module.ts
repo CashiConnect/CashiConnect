@@ -11,6 +11,7 @@ import { FarmerProfilesModule } from './farmer/farmer_profiles/farmer_profiles.m
 import { FarmingProjectsModule } from './farmer/farming_projects/farming_projects.module.js';
 import { ProjectUpdatesModule } from './farmer/project_updates/project_updates.module.js';
 import { HarvestsModule } from './farmer/harvests/harvests.module.js';
+import { ActivityLogsModule } from './activity-logs/activity-logs.module.js';
 
 
 
@@ -37,6 +38,7 @@ import { HarvestsModule } from './farmer/harvests/harvests.module.js';
     FarmingProjectsModule,
     ProjectUpdatesModule,
     HarvestsModule,
+    ActivityLogsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
