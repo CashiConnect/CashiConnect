@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException, ConflictException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Report } from './entities/report.entity.js';
@@ -6,6 +6,9 @@ import { CreateReportDto } from './dto/create-report.dto.js';
 import { ReportQueryDto } from './dto/report-query.dto.js';
 import { User } from '../users/entities/user.entity.js';
 import { APP_ROLES } from '../common/decorators/roles.decorator.js';
+import {UpdateReportStatusDto } from './dto/update-report-status.dto.js'
+
+
 
 
 @Injectable()
@@ -95,4 +98,25 @@ export class ReportsService {
       meta: { total, page, limit, totalPages: Math.ceil(total / limit) },
     };
   }
+
+  
+  async updateStatus(id: number, dto: UpdateReportStatusDto) {
+    const report = await this.reportRepository.findOne({ where: { id },  select: { id: true, status: true } });
+
+    if (!report) {
+      throw new NotFoundException(`Report with id ${id} not found`);
+    }
+
+    if (report.status === 'resolved' || report.status === 'rejected') {
+      throw new ConflictException(`Report is already ${report.status}`);
+    }
+
+    await this.reportRepository.update(id, {
+      status: dto.status,
+      ...(dto.admin_note !== undefined && { admin_note: dto.admin_note }),
+    });
+
+    return { id, status: dto.status };
+  }
+
 }
