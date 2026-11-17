@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, ParseIntPipe, Patch, Query, UseGuards,
+import { Body, Controller,Get,Param, ParseIntPipe, Patch, Query, UseGuards,
 } from '@nestjs/common';
 import { UsersService } from './users.service.js';
 import { UserQueryDto } from './dto/user-query.dto.js';
@@ -8,12 +8,9 @@ import { RolesGuard } from '../common/guards/roles.guard.js';
 import { APP_ROLES, Roles } from '../common/decorators/roles.decorator.js';
 import { CurrentUser } from '../common/decorators/current-user.decorator.js';
 
-
-
 @Controller('users')
 @UseGuards(JwtAuthGuard, RolesGuard)
 export class UsersController {
-
   constructor(private readonly usersService: UsersService) {}
 
   @Get()
@@ -21,7 +18,6 @@ export class UsersController {
   findAll(@Query() query: UserQueryDto) {
     return this.usersService.findAll(query);
   }
-
 
   @Patch(':id/status')
   @Roles(APP_ROLES.ADMIN)
@@ -32,5 +28,4 @@ export class UsersController {
   ) {
     return this.usersService.updateStatus(id, dto, adminId);
   }
-  
 }
