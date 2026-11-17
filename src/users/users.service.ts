@@ -67,7 +67,7 @@ export class UsersService {
         throw new NotFoundException(`User with id ${id} not found`);
       }
 
-      if(user.status === dto.status) {
+      if (user.status === dto.status) {
         throw new ConflictException(`User is already ${dto.status}`);
       }
 
