@@ -13,6 +13,10 @@ import { ProjectUpdatesModule } from './farmer/project_updates/project_updates.m
 import { HarvestsModule } from './farmer/harvests/harvests.module.js';
 import { ActivityLogsModule } from './activity-logs/activity-logs.module.js';
 import { ReportsModule } from './reports/reports.module.js';
+import { InvestorProfilesModule } from './investor-profiles/investor-profiles.module.js';
+import { InvestmentsModule } from './investments/investments.module.js';
+import { InvestmentTransactionsModule } from './investment-transactions/investment-transactions.module.js';
+import { InvestmentReturnsModule } from './investment-returns/investment-returns.module.js';
 
 
 
@@ -41,6 +45,10 @@ import { ReportsModule } from './reports/reports.module.js';
     HarvestsModule,
     ActivityLogsModule,
     ReportsModule,
+    InvestorProfilesModule,
+    InvestmentsModule,
+    InvestmentTransactionsModule,
+    InvestmentReturnsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
