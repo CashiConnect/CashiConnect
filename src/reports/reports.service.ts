@@ -1,10 +1,11 @@
-
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Report } from './entities/report.entity.js';
 import { CreateReportDto } from './dto/create-report.dto.js';
+import { ReportQueryDto } from './dto/report-query.dto.js';
 import { User } from '../users/entities/user.entity.js';
+import { APP_ROLES } from '../common/decorators/roles.decorator.js';
 
 
 @Injectable()
@@ -60,6 +61,38 @@ export class ReportsService {
       description: report.description,
       status: report.status,
       created_at: report.created_at,
+    };
+  }
+
+
+  async findAll({ page, limit, status }: ReportQueryDto, userId: number, role: string) {
+    const isAdmin = role === APP_ROLES.ADMIN;
+
+    const [data, total] = await this.reportRepository.findAndCount({
+      where: {
+        ...(status && { status }),
+        ...(!isAdmin && { reporter: { id: userId } }),
+      },
+      relations: { reporter: true, reported_user: true, project: true },
+      select: {
+        id: true,
+        subject: true,
+        description: true,
+        status: true,
+        admin_note: true,
+        created_at: true,
+        reporter: { id: true, full_name: true },
+        reported_user: { id: true, full_name: true },
+        project: { id: true },
+      },
+      order: { id: 'DESC' },
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+
+    return {
+      data,
+      meta: { total, page, limit, totalPages: Math.ceil(total / limit) },
     };
   }
 }
