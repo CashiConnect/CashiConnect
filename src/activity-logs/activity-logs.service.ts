@@ -13,6 +13,7 @@ export type LogInput = {
 
 @Injectable()
 export class ActivityLogsService {
+  
   constructor(
     @InjectRepository(AdminActivityLog)
     private readonly logRepository: Repository<AdminActivityLog>,
