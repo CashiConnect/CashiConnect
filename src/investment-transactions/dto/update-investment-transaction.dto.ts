@@ -1,4 +1,5 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateInvestmentTransactionDto } from './create-investment-transaction.dto.js';
-
-export class UpdateInvestmentTransactionDto extends PartialType(CreateInvestmentTransactionDto) {}
+import { IsIn } from 'class-validator';
+// Status may be set only by Admin, never by the paying Investor.
+export class UpdateInvestmentTransactionDto {
+  @IsIn(['pending', 'success', 'failed', 'refunded']) paymentStatus: string;
+}
