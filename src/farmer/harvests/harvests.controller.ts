@@ -16,10 +16,13 @@ import { RolesGuard } from '../../common/guards/roles.guard.js';
 import { CreateHarvestDto } from './dto/create-harvest.dto.js';
 import { UpdateHarvestDto } from './dto/update-harvest.dto.js';
 import { HarvestsService } from './harvests.service.js';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 type AuthenticatedRequest = Request & { user: { userId: number } };
 
 @Controller('harvests')
+@ApiTags('Farmer Harvests')
+@ApiBearerAuth('access-token')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @FarmerOnly()
 export class HarvestsController {
