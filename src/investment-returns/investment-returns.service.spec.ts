@@ -1,18 +1,34 @@
-import { Test, TestingModule } from '@nestjs/testing';
+
+import { BadRequestException } from '@nestjs/common';
+import { describe, it } from 'node:test';
+import { rejects } from 'node:assert/strict';
+
 import { InvestmentReturnsService } from './investment-returns.service.js';
 
 describe('InvestmentReturnsService', () => {
-  let service: InvestmentReturnsService;
+  const repository = {
+    findOneBy: async ({ id }: { id: number }) => ({
+      id,
+      status: 'paid',
+    }),
+    create: (value: unknown) => value,
+    save: async (value: unknown) => value,
+  };
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [InvestmentReturnsService],
-    }).compile();
+  const investments = {
+    findOne: async () => null,
+    findAll: async () => [],
+  };
 
-    service = module.get<InvestmentReturnsService>(InvestmentReturnsService);
-  });
+  const service = new InvestmentReturnsService(
+    repository as any,
+    investments as any,
+  );
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
+  it('prevents changing an already paid return', async () => {
+    await rejects(
+      () => service.update(7, { status: 'pending' }),
+      BadRequestException,
+    );
   });
 });
