@@ -15,6 +15,7 @@ import { UpdateFarmerProfileDto } from './dto/update-farmer_profile.dto.js';
 import { FarmerProfile } from './entities/farmer_profile.entity.js';
 import { FarmerOnly } from '../../common/decorators/roles.decorator.js';
 import { RolesGuard } from '../../common/guards/roles.guard.js';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 type AuthenticatedRequest = Request & {
   user: {
@@ -25,6 +26,8 @@ type AuthenticatedRequest = Request & {
 };
 
 @Controller('farmer-profiles')
+@ApiTags('Farmer Profiles')
+@ApiBearerAuth('access-token')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @FarmerOnly()
 export class FarmerProfilesController {

@@ -18,10 +18,13 @@ import { RolesGuard } from '../../common/guards/roles.guard.js';
 import { CreateFarmingProjectDto } from './dto/create-farmer_projects.dto.js';
 import { UpdateFarmingProjectDto } from './dto/update-farmer_projects.dto.js';
 import { FarmingProjectsService } from './farming_projects.service.js';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 type AuthenticatedRequest = Request & { user: { userId: number } };
 
 @Controller('projects')
+@ApiTags('Farmer Projects')
+@ApiBearerAuth('access-token')
 @UseGuards(JwtAuthGuard, RolesGuard)
 export class FarmingProjectsController {
   constructor(private readonly farmingProjectsService: FarmingProjectsService) {}
