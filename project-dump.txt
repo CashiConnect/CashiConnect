@@ -1,0 +1,4388 @@
+﻿=== FOLDER TREE (src) ===
+Folder PATH listing for volume Academic
+Volume serial number is 0447-6BDD
+D:\ACADEMICS\2026-FALL\ADV WEBTECH\PROJECT\CASHICONNECT\SRC
+|   app.controller.spec.ts
+|   app.controller.ts
+|   app.module.ts
+|   app.service.ts
+|   main.ts
+|   
++---activity-logs
+|   |   activity-logs.module.ts
+|   |   activity-logs.service.ts
+|   |   
+|   \---entities
+|           admin-activity-log.entity.ts
+|           
++---auth
+|   |   auth.controller.ts
+|   |   auth.module.ts
+|   |   auth.service.ts
+|   |   
+|   +---dto
+|   |       login.dto.ts
+|   |       register.dto.ts
+|   |       
+|   +---guards
+|   |       jwt-auth.guard.ts
+|   |       
+|   +---strategies
+|   |       jwt.strategy.ts
+|   |       
+|   \---templates
+|           welcome.hbs
+|           
++---common
+|   +---decorators
+|   |       current-user.decorator.ts
+|   |       roles.decorator.ts
+|   |       
+|   +---dto
+|   |       pagination-query.dto.ts
+|   |       
+|   +---filters
+|   |       http-exception.filter.ts
+|   |       
+|   \---guards
+|           roles.guard.ts
+|           
++---config
+|       env.validation.ts
+|       
++---farmer
+|   +---farmer_profiles
+|   |   |   farmer_profiles.controller.ts
+|   |   |   farmer_profiles.module.ts
+|   |   |   farmer_profiles.service.ts
+|   |   |   
+|   |   +---dto
+|   |   |       create-farmer_profile.dto.ts
+|   |   |       update-farmer_profile.dto.ts
+|   |   |       
+|   |   \---entities
+|   |           farmer_profile.entity.ts
+|   |           
+|   +---farming_projects
+|   |   |   farming_projects.controller.ts
+|   |   |   farming_projects.module.ts
+|   |   |   farming_projects.service.ts
+|   |   |   
+|   |   \---entities
+|   |           farming_projects.entity.ts
+|   |           
+|   +---harvests
+|   |       harvests.controller.ts
+|   |       harvests.module.ts
+|   |       harvests.service.ts
+|   |       
+|   \---project_updates
+|           project_updates.controller.ts
+|           project_updates.module.ts
+|           project_updates.service.ts
+|           
++---investment-returns
+|   |   investment-returns.controller.spec.ts
+|   |   investment-returns.controller.ts
+|   |   investment-returns.module.ts
+|   |   investment-returns.service.spec.ts
+|   |   investment-returns.service.ts
+|   |   
+|   +---dto
+|   |       create-investment-return.dto.ts
+|   |       update-investment-return.dto.ts
+|   |       
+|   \---entities
+|           investment-return.entity.ts
+|           
++---investment-transactions
+|   |   investment-transactions.controller.spec.ts
+|   |   investment-transactions.controller.ts
+|   |   investment-transactions.module.ts
+|   |   investment-transactions.service.spec.ts
+|   |   investment-transactions.service.ts
+|   |   
+|   +---dto
+|   |       create-investment-transaction.dto.ts
+|   |       update-investment-transaction.dto.ts
+|   |       
+|   \---entities
+|           investment-transaction.entity.ts
+|           
++---investments
+|   |   investments.controller.spec.ts
+|   |   investments.controller.ts
+|   |   investments.module.ts
+|   |   investments.service.spec.ts
+|   |   investments.service.ts
+|   |   
+|   +---dto
+|   |       create-investment.dto.ts
+|   |       update-investment.dto.ts
+|   |       
+|   \---entities
+|           investment.entity.ts
+|           
++---investor-profiles
+|   |   investor-profiles.controller.spec.ts
+|   |   investor-profiles.controller.ts
+|   |   investor-profiles.module.ts
+|   |   investor-profiles.service.spec.ts
+|   |   investor-profiles.service.ts
+|   |   
+|   +---dto
+|   |       create-investor-profile.dto.ts
+|   |       update-investor-profile.dto.ts
+|   |       
+|   \---entities
+|           investor-profile.entity.ts
+|           
++---landowner
+|   +---hiring-requests
+|   |   |   hiring-requests.controller.ts
+|   |   |   hiring-requests.module.ts
+|   |   |   hiring-requests.service.ts
+|   |   |   
+|   |   +---dto
+|   |   |       create-hiring-request.dto.ts
+|   |   |       query-hiring-request.dto.ts
+|   |   |       respond-hiring-request.dto.ts
+|   |   |       update-hiring-request.dto.ts
+|   |   |       
+|   |   +---entities
+|   |   |       hiring-request.entity.ts
+|   |   |       
+|   |   \---templates
+|   |           hiring-request-received.hbs
+|   |           hiring-request-responded.hbs
+|   |           
+|   +---land-images
+|   |   |   land-images.controller.ts
+|   |   |   land-images.module.ts
+|   |   |   land-images.service.ts
+|   |   |   
+|   |   +---dto
+|   |   |       create-land-image.dto.ts
+|   |   |       update-land-image.dto.ts
+|   |   |       
+|   |   \---entities
+|   |           land-image.entity.ts
+|   |           
+|   +---landowner-profiles
+|   |   |   landowner-profiles.controller.ts
+|   |   |   landowner-profiles.module.ts
+|   |   |   landowner-profiles.service.ts
+|   |   |   
+|   |   +---dto
+|   |   |       create-landowner-profile.dto.ts
+|   |   |       update-landowner-profile.dto.ts
+|   |   |       
+|   |   \---entities
+|   |           landowner-profile.entity.ts
+|   |           
+|   \---lands
+|       |   lands.controller.ts
+|       |   lands.module.ts
+|       |   lands.service.ts
+|       |   
+|       +---dto
+|       |       create-land.dto.ts
+|       |       query-land.dto.ts
+|       |       update-availability.dto.ts
+|       |       update-land.dto.ts
+|       |       
+|       \---entities
+|               land.entity.ts
+|               
++---reports
+|   |   reports.controller.ts
+|   |   reports.module.ts
+|   |   reports.service.ts
+|   |   
+|   +---dto
+|   |       create-report.dto.ts
+|   |       report-query.dto.ts
+|   |       update-report-status.dto.ts
+|   |       
+|   \---entities
+|           report.entity.ts
+|           
++---roles
+|   |   roles.controller.ts
+|   |   roles.module.ts
+|   |   roles.service.ts
+|   |   
+|   +---dto
+|   |       create-role.dto.ts
+|   |       update-role.dto.ts
+|   |       
+|   \---entities
+|           roles.entity.ts
+|           
+\---users
+    |   users.controller.ts
+    |   users.module.ts
+    |   users.service.ts
+    |   
+    +---dto
+    |       update-user-status.dto.ts
+    |       user-query.dto.ts
+    |       
+    \---entities
+            user.entity.ts
+            
+
+=== FILE: .\src\app.controller.ts ===
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service.js';
+
+@Controller()
+export class AppController {
+  constructor(private readonly appService: AppService) {}
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
+}
+
+
+=== FILE: .\src\app.module.ts ===
+import { Module } from '@nestjs/common';
+import { AppController } from './app.controller.js';
+import { AppService } from './app.service.js';
+import { AuthModule } from './auth/auth.module.js';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { RolesModule } from './roles/roles.module.js';
+import { UsersModule } from './users/users.module.js';
+import { validateEnv } from './config/env.validation.js';
+import { FarmerProfilesModule } from './farmer/farmer_profiles/farmer_profiles.module.js';
+import { FarmingProjectsModule } from './farmer/farming_projects/farming_projects.module.js';
+import { ProjectUpdatesModule } from './farmer/project_updates/project_updates.module.js';
+import { HarvestsModule } from './farmer/harvests/harvests.module.js';
+import { LandownerProfilesModule } from './landowner/landowner-profiles/landowner-profiles.module.js';
+import { LandImagesModule } from './landowner/land-images/land-images.module.js';
+import { LandsModule } from './landowner/lands/lands.module.js';
+import { HiringRequestsModule } from './landowner/hiring-requests/hiring-requests.module.js';
+import { ActivityLogsModule } from './activity-logs/activity-logs.module.js';
+import { ReportsModule } from './reports/reports.module.js';
+import { InvestorProfilesModule } from './investor-profiles/investor-profiles.module.js';
+import { InvestmentsModule } from './investments/investments.module.js';
+import { InvestmentTransactionsModule } from './investment-transactions/investment-transactions.module.js';
+import { InvestmentReturnsModule } from './investment-returns/investment-returns.module.js';
+
+@Module({
+  imports: [ConfigModule.forRoot({ isGlobal: true, validate: validateEnv }),
+    AuthModule,
+    TypeOrmModule.forRootAsync({
+    imports: [ConfigModule],
+    inject: [ConfigService],
+    useFactory: (config: ConfigService) => ({
+      type: 'postgres',
+      host: config.get<string>('DB_HOST'),
+      port: config.get<number>('DB_PORT'),
+      username: config.get<string>('DB_USERNAME'),
+      password: config.get<string>('DB_PASSWORD'),
+      database: config.get<string>('DB_DATABASE'),
+      autoLoadEntities: true,
+      synchronize: true,
+    }),
+  }),
+    RolesModule,
+    UsersModule,
+    FarmerProfilesModule,
+    FarmingProjectsModule,
+    ProjectUpdatesModule,
+    HarvestsModule,
+    LandownerProfilesModule,
+    LandImagesModule,
+    LandsModule,
+    HiringRequestsModule,
+    ActivityLogsModule,
+    ReportsModule,
+    InvestorProfilesModule,
+    InvestmentsModule,
+    InvestmentTransactionsModule,
+    InvestmentReturnsModule,
+  ],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule { }
+
+
+=== FILE: .\src\app.service.ts ===
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class AppService {
+  getHello(): string {
+    return 'Hello World!';
+  }
+}
+
+
+=== FILE: .\src\main.ts ===
+import { NestFactory, Reflector } from '@nestjs/core';
+import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
+import { AppModule } from './app.module.js';
+import { AllExceptionsFilter } from './common/filters/http-exception.filter.js';
+
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+
+  app.setGlobalPrefix('api');
+  app.enableCors();
+
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true,
+      transform: true,
+    }),
+  );
+  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
+  app.useGlobalFilters(new AllExceptionsFilter());
+
+  await app.listen(process.env.PORT ?? 3000);
+}
+void bootstrap();
+
+=== FILE: .\src\activity-logs\activity-logs.module.ts ===
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ActivityLogsService } from './activity-logs.service.js';
+import { AdminActivityLog } from './entities/admin-activity-log.entity.js';
+
+@Module({
+    imports: [TypeOrmModule.forFeature([AdminActivityLog])],
+    providers: [ActivityLogsService],
+    exports: [ActivityLogsService],
+})
+export class ActivityLogsModule { } 
+
+=== FILE: .\src\activity-logs\activity-logs.service.ts ===
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { EntityManager, Repository } from 'typeorm';
+import { AdminActivityLog } from './entities/admin-activity-log.entity.js';
+
+
+export type LogInput = {
+  adminId: number;
+  action: string;
+  entityType: string;
+  entityId: number;
+};
+
+@Injectable()
+export class ActivityLogsService {
+  
+  constructor(
+    @InjectRepository(AdminActivityLog)
+    private readonly logRepository: Repository<AdminActivityLog>,
+  ) {}
+
+  log(input: LogInput, manager?: EntityManager) {
+    const repo = manager
+      ? manager.getRepository(AdminActivityLog)
+      : this.logRepository;
+
+    const entry = repo.create({
+      admin: { id: input.adminId },
+      action: input.action,
+      entity_type: input.entityType,
+      entity_id: input.entityId,
+    });
+
+    return repo.save(entry);
+  }
+}
+
+=== FILE: .\src\activity-logs\entities\admin-activity-log.entity.ts ===
+
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, type Relation,
+} from 'typeorm';
+import { User } from '../../users/entities/user.entity.js';
+
+@Entity('activity_log')
+export class AdminActivityLog {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @ManyToOne(() => User, { nullable: false, onDelete: 'RESTRICT' })
+  @JoinColumn({ name: 'admin_id' })
+  admin: Relation<User>;
+
+  @Column({ length: 100 })
+  action: string;
+
+  @Column({ length: 50 })
+  entity_type: string;
+
+  @Column()
+  entity_id: number;
+
+  @CreateDateColumn()
+  created_at: Date;
+}
+
+=== FILE: .\src\auth\auth.controller.ts ===
+import { Controller, Post, Body, Get, UseGuards } from '@nestjs/common';
+import { AuthService } from './auth.service.js';
+import { RegisterDto } from './dto/register.dto.js';
+import { LoginDto } from './dto/login.dto.js';
+import { JwtAuthGuard } from './guards/jwt-auth.guard.js';
+import { CurrentUser } from '../common/decorators/current-user.decorator.js';
+
+@Controller('auth')
+export class AuthController {
+  constructor(private readonly authService: AuthService) {}
+
+  @Post('register')
+  register(@Body() dto: RegisterDto) {
+    return this.authService.register(dto);
+  }
+
+  @Post('login')
+  login(@Body() dto: LoginDto) {
+    return this.authService.login(dto);
+  }
+
+  @Get('me')
+  @UseGuards(JwtAuthGuard)
+  getMe(@CurrentUser('userId') userId: number) {
+    return this.authService.getMe(userId);
+  }
+}
+
+=== FILE: .\src\auth\auth.module.ts ===
+import { Module } from '@nestjs/common';
+import { AuthController } from './auth.controller.js';
+import { AuthService } from './auth.service.js';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { JwtModule } from '@nestjs/jwt';
+import { PassportModule } from '@nestjs/passport';
+import { ConfigService } from '@nestjs/config';
+import { MailerModule } from '@nestjs-modules/mailer';
+import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handlebars.adapter.js';
+import { fileURLToPath } from 'node:url';
+import { User } from '../users/entities/user.entity.js';
+import { Role } from '../roles/entities/roles.entity.js';
+import { JwtStrategy } from './strategies/jwt.strategy.js';
+import { JwtAuthGuard } from './guards/jwt-auth.guard.js';
+
+
+
+@Module({
+  imports: [
+    TypeOrmModule.forFeature([User, Role]),
+    
+    MailerModule.forRootAsync({
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        transport: {
+          host: configService.get<string>('MAIL_HOST', 'sandbox.smtp.mailtrap.io'),
+          port: Number(configService.get<string>('MAIL_PORT', '2525')),
+          secure: configService.get<string>('MAIL_SECURE', 'false') === 'true',
+          auth: {
+            user: configService.get<string>('MAIL_USER', ''),
+            pass: configService.get<string>('MAIL_PASSWORD', ''),
+          },
+        },
+        defaults: {
+          from: configService.get<string>(
+            'MAIL_FROM',
+            'CashiConnect <no-reply@cashiconnect.local>',
+          ),
+        },
+        template: {
+          dir: fileURLToPath(new URL('./templates/', import.meta.url)),
+          adapter: new HandlebarsAdapter(),
+          options: { strict: true },
+        },
+      }),
+    }),
+
+    PassportModule.register({
+      defaultStrategy: 'jwt',
+    }),
+
+    JwtModule.registerAsync({
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        secret: configService.getOrThrow<string>('JWT_SECRET'),
+        signOptions: {
+          expiresIn: '15m',
+        },
+      }),
+    }),
+  ],
+
+  controllers: [AuthController],
+  providers: [AuthService, JwtStrategy, JwtAuthGuard],
+  exports: [JwtAuthGuard],
+
+})
+export class AuthModule {}
+
+
+=== FILE: .\src\auth\auth.service.ts ===
+import { Injectable, ConflictException, UnauthorizedException, BadRequestException, Logger,
+ NotFoundException } from '@nestjs/common';
+
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { User } from '../users/entities/user.entity.js';
+import { Role } from '../roles/entities/roles.entity.js';
+import { RegisterDto } from './dto/register.dto.js';
+import { LoginDto } from './dto/login.dto.js';
+import { JwtService } from '@nestjs/jwt';
+import { MailerService } from '@nestjs-modules/mailer';
+import * as bcrypt from 'bcrypt';
+
+
+@Injectable()
+export class AuthService {
+  private readonly logger = new Logger(AuthService.name);
+
+  constructor(
+    @InjectRepository(User)
+    private userRepository: Repository<User>,
+
+    @InjectRepository(Role)
+    private roleRepository: Repository<Role>,
+
+    private jwtService: JwtService,
+
+    private readonly mailerService: MailerService,
+  ) {}
+
+
+
+
+  async register(dto: RegisterDto) {
+    const existingUser = await this.userRepository.findOne({
+      where: [
+        { email: dto.email },
+        { phone: dto.phone },
+      ],
+    });
+
+    if (existingUser) {
+      throw new ConflictException(
+        'Email or phone already exists',
+      );
+    }
+
+    const role = await this.roleRepository.findOne({
+      where: { name: dto.role },
+    });
+
+    if (!role || role.name === 'Admin') {
+      throw new BadRequestException('Invalid role');
+    }
+
+    const hashedPassword = await bcrypt.hash(
+      dto.password,
+      10,
+    );
+
+    const user = this.userRepository.create({
+      full_name: dto.full_name,
+      email: dto.email,
+      password: hashedPassword,
+      phone: dto.phone,
+      role: role,
+      status: 'active',
+    });
+
+    const savedUser = await this.userRepository.save(user);
+
+    try {
+      await this.mailerService.sendMail({
+        to: savedUser.email,
+        subject: 'Welcome to CashiConnect',
+        template: 'welcome',
+        context: {
+          fullName: savedUser.full_name,
+          role: role.name,
+        },
+      });
+    } catch (error) {
+      this.logger.error(
+        `Welcome email could not be sent to ${savedUser.email}`,
+        error instanceof Error ? error.stack : String(error),
+      );
+    }
+
+    return {
+      message: 'Registration successful',
+
+      user: {
+        id: savedUser.id,
+        full_name: savedUser.full_name,
+        email: savedUser.email,
+        role: role.name,
+      },
+    };
+  }
+
+
+
+
+  async login(dto: LoginDto) {
+    const user = await this.userRepository.findOne({
+      where: { email: dto.email },
+      relations: {
+        role: true,
+      },
+    });
+
+    if (!user) {
+      throw new UnauthorizedException(
+        'Invalid email or password',
+      );
+    }
+
+    const isPasswordMatched = await bcrypt.compare(
+      dto.password,
+      user.password,
+    );
+
+    if (!isPasswordMatched) {
+      throw new UnauthorizedException(
+        'Invalid email or password',
+      );
+    }
+
+    if (user.status !== 'active') {
+      throw new UnauthorizedException(
+        'Your account is not active',
+      );
+    }
+
+    const payload = {
+      sub: user.id,
+      email: user.email,
+      role: user.role.name,
+    };
+
+    const accessToken = await this.jwtService.signAsync(
+      payload,
+    );
+
+    return {
+      message: 'Login successful',
+
+      access_token: accessToken,
+
+      user: {
+        id: user.id,
+        full_name: user.full_name,
+        email: user.email,
+        role: user.role.name,
+      },
+    };
+  }
+
+
+  
+
+   async getMe(userId: number) {
+    const user = await this.userRepository.findOne({
+      where: { id: userId },
+      relations: { role: true },
+    });
+
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+
+    return {
+      id: user.id,
+      full_name: user.full_name,
+      email: user.email,
+      phone: user.phone,
+      status: user.status,
+      role: user.role.name,
+      created_at: user.created_at,
+    };
+  }
+
+}
+
+
+=== FILE: .\src\auth\dto\login.dto.ts ===
+import { IsEmail, MinLength } from 'class-validator';
+
+export class LoginDto {
+  @IsEmail()
+  email: string;
+
+  @MinLength(6)
+  password: string;
+}
+
+=== FILE: .\src\auth\dto\register.dto.ts ===
+import { IsEmail, IsIn, IsNotEmpty, IsString, MinLength } from 'class-validator';
+
+export class RegisterDto {
+  @IsString()
+  @IsNotEmpty()
+  full_name: string;
+
+  @IsEmail()
+  email: string;
+
+  @MinLength(6)
+  password: string;
+
+  @IsString()
+  @IsNotEmpty()
+  phone: string;
+
+  @IsIn(['Farmer', 'Investor', 'Landowner'])
+  role: string;
+}
+
+=== FILE: .\src\auth\guards\jwt-auth.guard.ts ===
+import { Injectable } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
+
+@Injectable()
+export class JwtAuthGuard extends AuthGuard('jwt') {}
+
+=== FILE: .\src\auth\strategies\jwt.strategy.ts ===
+import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { PassportStrategy } from '@nestjs/passport';
+import { InjectRepository } from '@nestjs/typeorm';
+import { ExtractJwt, Strategy } from 'passport-jwt';
+import { ConfigService } from '@nestjs/config';
+import { Repository } from 'typeorm';
+import { User } from '../../users/entities/user.entity.js';
+
+@Injectable()
+export class JwtStrategy extends PassportStrategy(Strategy) {
+  constructor(
+    configService: ConfigService,
+    @InjectRepository(User) private userRepository: Repository<User>,
+  ) {
+    super({
+      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+      ignoreExpiration: false,
+      secretOrKey: configService.getOrThrow<string>('JWT_SECRET'),
+    });
+  }
+
+  async validate(payload: any) {
+    const user = await this.userRepository.findOne({
+      where: { id: payload.sub },
+      relations: { role: true },
+    });
+
+    if (!user || user.status !== 'active') {
+      throw new UnauthorizedException('Account not found or not active');
+    }
+
+    return { userId: user.id, email: user.email, role: user.role.name };
+  }
+}
+
+=== FILE: .\src\common\decorators\current-user.decorator.ts ===
+
+import { createParamDecorator, ExecutionContext } from '@nestjs/common';
+
+export const CurrentUser = createParamDecorator(
+  (field: string | undefined, ctx: ExecutionContext) => {
+    const user = ctx.switchToHttp().getRequest().user;
+    return field ? user?.[field] : user; 
+  },
+);
+
+=== FILE: .\src\common\decorators\roles.decorator.ts ===
+import { SetMetadata } from '@nestjs/common';
+
+export const ROLES_KEY = 'roles';
+
+export const APP_ROLES = {
+  ADMIN: 'Admin',
+  FARMER: 'Farmer',
+  INVESTOR: 'Investor',
+  LANDOWNER: 'Landowner',
+} as const;
+
+export type AppRole = (typeof APP_ROLES)[keyof typeof APP_ROLES];
+
+export const Roles = (...roles: AppRole[]) => SetMetadata(ROLES_KEY, roles);
+
+export const FarmerOnly = () => Roles(APP_ROLES.FARMER);
+
+export const LandownerOnly = () => Roles(APP_ROLES.LANDOWNER);
+
+
+=== FILE: .\src\common\dto\pagination-query.dto.ts ===
+import {Type} from "class-transformer";
+import {IsInt, IsOptional, Max, Min} from "class-validator";
+
+export class PaginationQueryDto {
+    @IsOptional()
+    @Type(() => Number)
+    @IsInt()
+    @Min(1)
+    page: number = 1;
+
+    @IsOptional()
+    @Type(() => Number)
+    @IsInt()
+    @Min(1)
+    @Max(100)
+    limit: number = 10;
+}
+
+export interface PaginatedResult<T> {
+    data: T[];
+    meta: {
+        page: number;
+        limit: number;  
+        total: number;
+        totalPages: number;
+    };
+}
+
+export function paginate<T>([data, total]: [T[], number] ,
+    page: number,
+     limit: number ): 
+     PaginatedResult<T> {
+        return {
+            data,
+            meta : {page, limit, total, totalPages: Math.ceil(total / limit)},
+        };
+    }
+
+    export function skipTake(query: PaginationQueryDto) {
+        return {
+            skip: (query.page - 1) * query.limit,
+            take   : query.limit,
+        };
+    }
+
+
+=== FILE: .\src\common\filters\http-exception.filter.ts ===
+import { ArgumentsHost, Catch, ExceptionFilter, HttpException, HttpStatus, Logger,
+} from '@nestjs/common';
+import type { Request, Response } from 'express';
+import { QueryFailedError } from 'typeorm';
+
+
+
+
+@Catch()
+export class AllExceptionsFilter implements ExceptionFilter {
+  private readonly logger = new Logger(AllExceptionsFilter.name);
+
+  catch(exception: unknown, host: ArgumentsHost) {
+    const ctx = host.switchToHttp();
+    const request = ctx.getRequest<Request>();
+    const response = ctx.getResponse<Response>();
+
+
+    let statusCode: number = HttpStatus.INTERNAL_SERVER_ERROR;
+    let message: string | string[] = 'Internal server error';
+
+
+    if (exception instanceof HttpException) {
+      statusCode = exception.getStatus();
+      const body: any = exception.getResponse();
+      message = body.message ?? exception.message;
+    } 
+    else if (exception instanceof QueryFailedError) {
+      const dbError: any = exception.driverError;
+
+      if (dbError.code === '23505') {
+        statusCode = HttpStatus.CONFLICT;
+        message = 'This value already exists';
+      } 
+      else if (dbError.code === '23503') {
+        statusCode = HttpStatus.CONFLICT;
+        message = 'Related records exist or a referenced record is missing';
+      } 
+      else {
+        this.logger.error(exception.message, exception.stack);
+      }
+    } 
+    else {
+      this.logger.error(String(exception), (exception as Error)?.stack);
+    }
+
+    response.status(statusCode).json({
+      success: false,
+      statusCode,
+      message,
+      path: request.url,
+      timestamp: new Date().toISOString(),
+    });
+  }
+}
+
+=== FILE: .\src\common\guards\roles.guard.ts ===
+import { CanActivate, ExecutionContext, ForbiddenException, Injectable } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+import { ROLES_KEY } from '../decorators/roles.decorator.js';
+
+@Injectable()
+export class RolesGuard implements CanActivate {
+  constructor(private reflector: Reflector) {}
+
+  canActivate(context: ExecutionContext): boolean {
+    const required = this.reflector.getAllAndOverride<string[]>(ROLES_KEY, [
+      context.getHandler(),
+      context.getClass(),
+    ]);
+    if (!required || required.length === 0) return true;
+
+    const { user } = context.switchToHttp().getRequest();
+    if (!user || !required.includes(user.role)) {
+      throw new ForbiddenException('You do not have permission to perform this action');
+    }
+    return true;
+  }
+}
+
+=== FILE: .\src\config\env.validation.ts ===
+export function validateEnv(config: Record<string, unknown>) {
+  const required = [
+    'DB_HOST',
+    'DB_PORT',
+    'DB_USERNAME',
+    'DB_PASSWORD',
+    'DB_DATABASE',
+    'JWT_SECRET',
+  ];
+
+  const missing = required.filter((key) => !config[key]);
+  if (missing.length > 0) {
+    throw new Error(`Missing environment variables: ${missing.join(', ')}`);
+  }
+
+  const port = Number(config.DB_PORT);
+  if (Number.isNaN(port)) {
+    throw new Error('DB_PORT must be a number');
+  }
+
+  return { ...config, DB_PORT: port };
+}
+
+=== FILE: .\src\farmer\farmer_profiles\farmer_profiles.controller.ts ===
+import {
+  BadRequestException,
+  Body,
+  Controller,
+  Get,
+  Post,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
+import type { Request } from 'express';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard.js';
+import { CreateFarmerProfileDto } from './dto/create-farmer_profile.dto.js';
+import { FarmerProfilesService } from './farmer_profiles.service.js';
+import { UpdateFarmerProfileDto } from './dto/update-farmer_profile.dto.js';
+import { FarmerProfile } from './entities/farmer_profile.entity.js';
+import { FarmerOnly } from '../../common/decorators/roles.decorator.js';
+import { RolesGuard } from '../../common/guards/roles.guard.js';
+
+type AuthenticatedRequest = Request & {
+  user: {
+    userId: number;
+    email: string;
+    role: string;
+  };
+};
+
+@Controller('farmer-profiles')
+@UseGuards(JwtAuthGuard, RolesGuard)
+@FarmerOnly()
+export class FarmerProfilesController {
+  constructor(
+    private readonly farmerProfilesService: FarmerProfilesService,
+  ) {}
+
+  @Post()
+  create(
+    @Body() createDto: CreateFarmerProfileDto,
+    @Req() req: AuthenticatedRequest,
+  ) {
+    return this.farmerProfilesService.create(createDto, req.user.userId);
+  }
+@Post('update')
+  async updateProfile(@Body() updateDto: UpdateFarmerProfileDto, 
+@Req() req: AuthenticatedRequest
+): Promise<{message: string,farmerProfile: FarmerProfile}> {
+  const updatefarmerProfile= await this.farmerProfilesService.updateProfile(updateDto, req.user.userId);
+  if(!updatefarmerProfile){
+    throw new BadRequestException('Failed to update farmer profile');
+  }else{
+    return{
+      message: 'Farmer profile updated successfully',
+      farmerProfile: updatefarmerProfile
+    }
+
+  }
+
+  }
+
+  @Get('me')
+  findMyProfile(@Req() req: AuthenticatedRequest) {
+    return this.farmerProfilesService.findByUserId(req.user.userId);
+  }
+}
+
+
+=== FILE: .\src\farmer\farmer_profiles\farmer_profiles.module.ts ===
+import { Module } from '@nestjs/common';
+import { FarmerProfilesService } from './farmer_profiles.service.js';
+import { FarmerProfilesController } from './farmer_profiles.controller.js';
+import { FarmerProfile } from './entities/farmer_profile.entity.js';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+@Module({
+  controllers: [FarmerProfilesController],
+  providers: [FarmerProfilesService],
+  imports: [
+    TypeOrmModule.forFeature([FarmerProfile])
+  ],
+})
+export class FarmerProfilesModule {}
+
+
+=== FILE: .\src\farmer\farmer_profiles\farmer_profiles.service.ts ===
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { CreateFarmerProfileDto } from './dto/create-farmer_profile.dto.js';
+import { FarmerProfile } from './entities/farmer_profile.entity.js';
+import { UpdateFarmerProfileDto } from './dto/update-farmer_profile.dto.js';
+
+@Injectable()
+export class FarmerProfilesService {
+  constructor(
+    @InjectRepository(FarmerProfile)
+    private readonly farmerProfileRepository: Repository<FarmerProfile>,
+  ) {}
+
+  create(createDto: CreateFarmerProfileDto, userId: number) {
+    const profile = this.farmerProfileRepository.create({
+      ...createDto,
+      user_id: userId,
+    });
+
+    return this.farmerProfileRepository.save(profile);
+  }
+
+  async findByUserId(userId: number) {
+    const profile = await this.farmerProfileRepository.findOneBy({
+      user_id: userId,
+    });
+
+    if (!profile) {
+      throw new NotFoundException('Farmer profile not found');
+    }
+
+    return profile;
+  }
+
+
+
+  async updateProfile(dto: UpdateFarmerProfileDto, userId: number) {
+    const profile=await this.farmerProfileRepository.findOne(
+      {
+        where: {
+          user_id: userId,
+        },
+      }
+    )
+    if (!profile){
+      throw new NotFoundException('Farmer profile not found');
+    }else{}
+    Object.assign(profile,dto);
+    return this.farmerProfileRepository.save(profile);
+
+  }
+
+
+
+}
+
+
+=== FILE: .\src\farmer\farmer_profiles\dto\create-farmer_profile.dto.ts ===
+import { IsInt, IsOptional, IsString, MaxLength, Min, MinLength, minLength,} from "class-validator";
+import { IsNull } from "typeorm";
+
+export class CreateFarmerProfileDto {
+    @IsInt()
+    @Min(0)
+    experience_years: number;
+    @IsString()
+    @MaxLength(100)
+    specialization: string;
+    @IsString()
+    @MaxLength(300)
+    @IsOptional()
+    bio?: string;
+    @IsString()
+    @MaxLength(300)
+    @MinLength(3)
+    address: string;
+}
+
+=== FILE: .\src\farmer\farmer_profiles\dto\update-farmer_profile.dto.ts ===
+
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateFarmerProfileDto } from './create-farmer_profile.dto.js';
+export class UpdateFarmerProfileDto  extends PartialType(CreateFarmerProfileDto) {
+    
+}
+
+=== FILE: .\src\farmer\farmer_profiles\entities\farmer_profile.entity.ts ===
+import {
+    Column,
+    CreateDateColumn,
+    Entity,
+    OneToMany,
+    PrimaryGeneratedColumn,
+    UpdateDateColumn,
+} from 'typeorm';
+import { FarmingProjects } from '../../farming_projects/entities/farming_projects.entity.js';
+
+@Entity('farmer_profiles')
+export class FarmerProfile{
+    [x: string]: any;
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @Column({ unique: true })
+    user_id: number;
+
+    @Column()
+    experience_years: number;
+    @Column({
+        type:'varchar',
+        length: 100
+    })
+    specialization: string;
+    @Column({
+        type: 'text',
+        nullable: true
+    })
+    bio: string;
+    @Column({
+        type: 'text'
+    })
+    address: string;
+    @Column({
+        type: 'varchar',
+        length: 100,
+        default: 'unverified'
+    })   
+    verification_status: string;
+    @CreateDateColumn()
+    created_at: Date;
+    @UpdateDateColumn()
+    updated_at: Date;
+
+    @OneToMany(()=>FarmingProjects,(farmingProjects)=>farmingProjects.farmerProfile,{eager: true})
+    farmingProjects: FarmingProjects[];
+}
+
+
+=== FILE: .\src\farmer\farming_projects\farming_projects.controller.ts ===
+import { Controller } from '@nestjs/common';
+import { FarmingProjectsService } from './farming_projects.service.js';
+
+@Controller('farming-projects')
+export class FarmingProjectsController {
+  constructor(private readonly farmingProjectsService: FarmingProjectsService) {}
+}
+
+
+=== FILE: .\src\farmer\farming_projects\farming_projects.module.ts ===
+import { Module } from '@nestjs/common';
+import { FarmingProjectsService } from './farming_projects.service.js';
+import { FarmingProjectsController } from './farming_projects.controller.js';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { FarmingProjects } from './entities/farming_projects.entity.js';
+import { FarmerProfile } from '../farmer_profiles/entities/farmer_profile.entity.js';
+
+@Module({
+  imports: [TypeOrmModule.forFeature([FarmingProjects])],
+  controllers: [FarmingProjectsController],
+  providers: [FarmingProjectsService],
+})
+export class FarmingProjectsModule {}
+
+
+=== FILE: .\src\farmer\farming_projects\farming_projects.service.ts ===
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class FarmingProjectsService {}
+
+
+=== FILE: .\src\farmer\farming_projects\entities\farming_projects.entity.ts ===
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn, type Relation } from "typeorm";
+import {FarmerProfile} from "../../farmer_profiles/entities/farmer_profile.entity.js";
+
+@Entity('farming_projects')
+export class FarmingProjects{
+    @PrimaryGeneratedColumn()
+    id:number;
+    @Column({
+        nullable: true,
+        type:'varchar',
+        length: 150
+    })
+    title:string;
+    @Column({
+        type:'varchar',
+        length: 100
+    })
+    crop_name:string;
+    @Column({
+        type:'varchar',
+        length: 100
+    })
+    description:string;
+    @Column({
+        type:'decimal',
+        precision: 12,
+        scale: 2
+    })
+    required_funding:number;
+    @Column({
+        type:'date'
+    })
+    start_date:Date;
+    @Column({
+        type:'date'
+        
+    })
+    end_date:Date;
+
+    @Column({ type: 'varchar',
+         length: 20,
+          default: 'open' })
+  status: string;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
+
+  @ManyToOne(()=>FarmerProfile
+,(farmerProfile)=>farmerProfile.farmingProjects,{nullable:false,onDelete:'CASCADE'})
+@JoinColumn({name:'farmer_id',referencedColumnName:'id'}  )
+farmerProfile: Relation<FarmerProfile>;
+
+
+  
+
+
+}
+
+
+=== FILE: .\src\farmer\harvests\harvests.controller.ts ===
+import { Controller } from '@nestjs/common';
+import { HarvestsService } from './harvests.service.js';
+
+@Controller('harvests')
+export class HarvestsController {
+  constructor(private readonly harvestsService: HarvestsService) {}
+}
+
+
+=== FILE: .\src\farmer\harvests\harvests.module.ts ===
+import { Module } from '@nestjs/common';
+import { HarvestsService } from './harvests.service.js';
+import { HarvestsController } from './harvests.controller.js';
+
+@Module({
+  controllers: [HarvestsController],
+  providers: [HarvestsService],
+})
+export class HarvestsModule {}
+
+
+=== FILE: .\src\farmer\harvests\harvests.service.ts ===
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class HarvestsService {}
+
+
+=== FILE: .\src\farmer\project_updates\project_updates.controller.ts ===
+import { Controller } from '@nestjs/common';
+import { ProjectUpdatesService } from './project_updates.service.js';
+
+@Controller('project-updates')
+export class ProjectUpdatesController {
+  constructor(private readonly projectUpdatesService: ProjectUpdatesService) {}
+}
+
+
+=== FILE: .\src\farmer\project_updates\project_updates.module.ts ===
+import { Module } from '@nestjs/common';
+import { ProjectUpdatesService } from './project_updates.service.js';
+import { ProjectUpdatesController } from './project_updates.controller.js';
+
+@Module({
+  controllers: [ProjectUpdatesController],
+  providers: [ProjectUpdatesService],
+})
+export class ProjectUpdatesModule {}
+
+
+=== FILE: .\src\farmer\project_updates\project_updates.service.ts ===
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class ProjectUpdatesService {}
+
+
+=== FILE: .\src\investment-returns\investment-returns.controller.ts ===
+import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { InvestmentReturnsService } from './investment-returns.service.js';
+import { CreateInvestmentReturnDto } from './dto/create-investment-return.dto.js';
+import { UpdateInvestmentReturnDto } from './dto/update-investment-return.dto.js';
+
+@Controller('investment-returns')
+export class InvestmentReturnsController {
+  constructor(private readonly investmentReturnsService: InvestmentReturnsService) {}
+
+  @Post()
+  create(@Body() createInvestmentReturnDto: CreateInvestmentReturnDto) {
+    return this.investmentReturnsService.create(createInvestmentReturnDto);
+  }
+
+  @Get()
+  findAll() {
+    return this.investmentReturnsService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.investmentReturnsService.findOne(+id);
+  }
+
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() updateInvestmentReturnDto: UpdateInvestmentReturnDto) {
+    return this.investmentReturnsService.update(+id, updateInvestmentReturnDto);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.investmentReturnsService.remove(+id);
+  }
+}
+
+
+=== FILE: .\src\investment-returns\investment-returns.module.ts ===
+import { Module } from '@nestjs/common';
+import { InvestmentReturnsService } from './investment-returns.service.js';
+import { InvestmentReturnsController } from './investment-returns.controller.js';
+
+@Module({
+  controllers: [InvestmentReturnsController],
+  providers: [InvestmentReturnsService],
+})
+export class InvestmentReturnsModule {}
+
+
+=== FILE: .\src\investment-returns\investment-returns.service.ts ===
+import { Injectable } from '@nestjs/common';
+import { CreateInvestmentReturnDto } from './dto/create-investment-return.dto.js';
+import { UpdateInvestmentReturnDto } from './dto/update-investment-return.dto.js';
+
+@Injectable()
+export class InvestmentReturnsService {
+  create(createInvestmentReturnDto: CreateInvestmentReturnDto) {
+    return 'This action adds a new investmentReturn';
+  }
+
+  findAll() {
+    return `This action returns all investmentReturns`;
+  }
+
+  findOne(id: number) {
+    return `This action returns a #${id} investmentReturn`;
+  }
+
+  update(id: number, updateInvestmentReturnDto: UpdateInvestmentReturnDto) {
+    return `This action updates a #${id} investmentReturn`;
+  }
+
+  remove(id: number) {
+    return `This action removes a #${id} investmentReturn`;
+  }
+}
+
+
+=== FILE: .\src\investment-returns\dto\create-investment-return.dto.ts ===
+export class CreateInvestmentReturnDto {}
+
+
+=== FILE: .\src\investment-returns\dto\update-investment-return.dto.ts ===
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateInvestmentReturnDto } from './create-investment-return.dto.js';
+
+export class UpdateInvestmentReturnDto extends PartialType(CreateInvestmentReturnDto) {}
+
+
+=== FILE: .\src\investment-returns\entities\investment-return.entity.ts ===
+
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  JoinColumn,
+  CreateDateColumn,
+  type Relation,
+} from 'typeorm';
+
+import { Investment } from '../../investments/entities/investment.entity.js';
+
+@Entity('investment_returns')
+export class InvestmentReturn {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({
+    name: 'investment_id',
+    type: 'int',
+  })
+  investmentId: number;
+
+  @ManyToOne(
+    () => Investment,
+    (investment) => investment.returns,
+    {
+      onDelete: 'RESTRICT',
+      nullable: false,
+    },
+  )
+  @JoinColumn({ name: 'investment_id' })
+  investment: Relation<Investment>;
+
+  @Column({
+    name: 'return_amount',
+    type: 'decimal',
+    precision: 12,
+    scale: 2,
+  })
+  returnAmount: string;
+
+  @Column({
+    name: 'return_type',
+    type: 'varchar',
+    length: 30,
+  })
+  returnType: string;
+
+  @Column({
+    type: 'varchar',
+    length: 30,
+  })
+  status: string;
+
+  @Column({
+    name: 'paid_at',
+    type: 'timestamp',
+    nullable: true,
+  })
+  paidAt: Date | null;
+
+  @CreateDateColumn({
+    name: 'created_at',
+    type: 'timestamp',
+  })
+  createdAt: Date;
+}
+
+
+=== FILE: .\src\investment-transactions\investment-transactions.controller.ts ===
+import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { InvestmentTransactionsService } from './investment-transactions.service.js';
+import { CreateInvestmentTransactionDto } from './dto/create-investment-transaction.dto.js';
+import { UpdateInvestmentTransactionDto } from './dto/update-investment-transaction.dto.js';
+
+@Controller('investment-transactions')
+export class InvestmentTransactionsController {
+  constructor(private readonly investmentTransactionsService: InvestmentTransactionsService) {}
+
+  @Post()
+  create(@Body() createInvestmentTransactionDto: CreateInvestmentTransactionDto) {
+    return this.investmentTransactionsService.create(createInvestmentTransactionDto);
+  }
+
+  @Get()
+  findAll() {
+    return this.investmentTransactionsService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.investmentTransactionsService.findOne(+id);
+  }
+
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() updateInvestmentTransactionDto: UpdateInvestmentTransactionDto) {
+    return this.investmentTransactionsService.update(+id, updateInvestmentTransactionDto);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.investmentTransactionsService.remove(+id);
+  }
+}
+
+
+=== FILE: .\src\investment-transactions\investment-transactions.module.ts ===
+import { Module } from '@nestjs/common';
+import { InvestmentTransactionsService } from './investment-transactions.service.js';
+import { InvestmentTransactionsController } from './investment-transactions.controller.js';
+
+@Module({
+  controllers: [InvestmentTransactionsController],
+  providers: [InvestmentTransactionsService],
+})
+export class InvestmentTransactionsModule {}
+
+
+=== FILE: .\src\investment-transactions\investment-transactions.service.ts ===
+import { Injectable } from '@nestjs/common';
+import { CreateInvestmentTransactionDto } from './dto/create-investment-transaction.dto.js';
+import { UpdateInvestmentTransactionDto } from './dto/update-investment-transaction.dto.js';
+
+@Injectable()
+export class InvestmentTransactionsService {
+  create(createInvestmentTransactionDto: CreateInvestmentTransactionDto) {
+    return 'This action adds a new investmentTransaction';
+  }
+
+  findAll() {
+    return `This action returns all investmentTransactions`;
+  }
+
+  findOne(id: number) {
+    return `This action returns a #${id} investmentTransaction`;
+  }
+
+  update(id: number, updateInvestmentTransactionDto: UpdateInvestmentTransactionDto) {
+    return `This action updates a #${id} investmentTransaction`;
+  }
+
+  remove(id: number) {
+    return `This action removes a #${id} investmentTransaction`;
+  }
+}
+
+
+=== FILE: .\src\investment-transactions\dto\create-investment-transaction.dto.ts ===
+export class CreateInvestmentTransactionDto {}
+
+
+=== FILE: .\src\investment-transactions\dto\update-investment-transaction.dto.ts ===
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateInvestmentTransactionDto } from './create-investment-transaction.dto.js';
+
+export class UpdateInvestmentTransactionDto extends PartialType(CreateInvestmentTransactionDto) {}
+
+
+=== FILE: .\src\investment-transactions\entities\investment-transaction.entity.ts ===
+
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  JoinColumn,
+  CreateDateColumn,
+  type Relation,
+} from 'typeorm';
+
+import { Investment } from '../../investments/entities/investment.entity.js';
+
+@Entity('investment_transactions')
+export class InvestmentTransaction {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({
+    name: 'investment_id',
+    type: 'int',
+  })
+  investmentId: number;
+
+  @ManyToOne(
+    () => Investment,
+    (investment) => investment.transactions,
+    {
+      onDelete: 'RESTRICT',
+      nullable: false,
+    },
+  )
+  @JoinColumn({ name: 'investment_id' })
+  investment: Relation<Investment>;
+
+  @Column({
+    name: 'transaction_reference',
+    type: 'varchar',
+    length: 100,
+    unique: true,
+  })
+  transactionReference: string;
+
+  @Column({
+    type: 'decimal',
+    precision: 12,
+    scale: 2,
+  })
+  amount: string;
+
+  @Column({
+    name: 'payment_method',
+    type: 'varchar',
+    length: 50,
+  })
+  paymentMethod: string;
+
+  @Column({
+    name: 'payment_status',
+    type: 'varchar',
+    length: 30,
+  })
+  paymentStatus: string;
+
+  @Column({
+    name: 'transaction_date',
+    type: 'timestamp',
+  })
+  transactionDate: Date;
+
+  @CreateDateColumn({
+    name: 'created_at',
+    type: 'timestamp',
+  })
+  createdAt: Date;
+}
+
+
+=== FILE: .\src\investments\investments.controller.ts ===
+import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { InvestmentsService } from './investments.service.js';
+import { CreateInvestmentDto } from './dto/create-investment.dto.js';
+import { UpdateInvestmentDto } from './dto/update-investment.dto.js';
+
+@Controller('investments')
+export class InvestmentsController {
+  constructor(private readonly investmentsService: InvestmentsService) {}
+
+  @Post()
+  create(@Body() createInvestmentDto: CreateInvestmentDto) {
+    return this.investmentsService.create(createInvestmentDto);
+  }
+
+  @Get()
+  findAll() {
+    return this.investmentsService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.investmentsService.findOne(+id);
+  }
+
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() updateInvestmentDto: UpdateInvestmentDto) {
+    return this.investmentsService.update(+id, updateInvestmentDto);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.investmentsService.remove(+id);
+  }
+}
+
+
+=== FILE: .\src\investments\investments.module.ts ===
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+import { InvestmentsController } from './investments.controller.js';
+import { InvestmentsService } from './investments.service.js';
+import { Investment } from './entities/investment.entity.js';
+
+@Module({
+  imports: [
+    TypeOrmModule.forFeature([Investment]),
+  ],
+  controllers: [InvestmentsController],
+  providers: [InvestmentsService],
+})
+export class InvestmentsModule {}
+
+=== FILE: .\src\investments\investments.service.ts ===
+import { Injectable } from '@nestjs/common';
+import { CreateInvestmentDto } from './dto/create-investment.dto.js';
+import { UpdateInvestmentDto } from './dto/update-investment.dto.js';
+
+@Injectable()
+export class InvestmentsService {
+  create(createInvestmentDto: CreateInvestmentDto) {
+    return 'This action adds a new investment';
+  }
+
+  findAll() {
+    return `This action returns all investments`;
+  }
+
+  findOne(id: number) {
+    return `This action returns a #${id} investment`;
+  }
+
+  update(id: number, updateInvestmentDto: UpdateInvestmentDto) {
+    return `This action updates a #${id} investment`;
+  }
+
+  remove(id: number) {
+    return `This action removes a #${id} investment`;
+  }
+}
+
+
+=== FILE: .\src\investments\dto\create-investment.dto.ts ===
+export class CreateInvestmentDto {}
+
+
+=== FILE: .\src\investments\dto\update-investment.dto.ts ===
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateInvestmentDto } from './create-investment.dto.js';
+
+export class UpdateInvestmentDto extends PartialType(CreateInvestmentDto) {}
+
+
+=== FILE: .\src\investments\entities\investment.entity.ts ===
+
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  OneToMany,
+  JoinColumn,
+  CreateDateColumn,
+  type Relation,
+} from 'typeorm';
+
+import { InvestorProfile } from '../../investor-profiles/entities/investor-profile.entity.js';
+
+import { FarmingProjects } from '../../farmer/farming_projects/entities/farming_projects.entity.js';
+
+import { InvestmentTransaction } from '../../investment-transactions/entities/investment-transaction.entity.js';
+
+import { InvestmentReturn } from '../../investment-returns/entities/investment-return.entity.js';
+
+@Entity('investments')
+export class Investment {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({
+    name: 'investor_id',
+    type: 'int',
+  })
+  investorId: number;
+
+  @ManyToOne(
+    () => InvestorProfile,
+    (investor) => investor.investments,
+    {
+      onDelete: 'RESTRICT',
+      nullable: false,
+    },
+  )
+  @JoinColumn({ name: 'investor_id' })
+  investor: Relation<InvestorProfile>;
+
+  @Column({
+    name: 'project_id',
+    type: 'int',
+  })
+  projectId: number;
+
+  @ManyToOne(() => FarmingProjects, {
+    onDelete: 'RESTRICT',
+    nullable: false,
+  })
+  @JoinColumn({ name: 'project_id' })
+  project: Relation<FarmingProjects>;
+
+  @Column({
+    type: 'decimal',
+    precision: 12,
+    scale: 2,
+  })
+  amount: string;
+
+  @Column({
+    type: 'varchar',
+    length: 30,
+  })
+  status: string;
+
+  @Column({
+    name: 'invested_at',
+    type: 'timestamp',
+  })
+  investedAt: Date;
+
+  @CreateDateColumn({
+    name: 'created_at',
+    type: 'timestamp',
+  })
+  createdAt: Date;
+
+  @OneToMany(
+    () => InvestmentTransaction,
+    (transaction) => transaction.investment,
+  )
+  transactions: Relation<InvestmentTransaction[]>;
+
+  @OneToMany(
+    () => InvestmentReturn,
+    (investmentReturn) => investmentReturn.investment,
+  )
+  returns: Relation<InvestmentReturn[]>;
+}
+
+
+=== FILE: .\src\investor-profiles\investor-profiles.controller.ts ===
+import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { InvestorProfilesService } from './investor-profiles.service.js';
+import { CreateInvestorProfileDto } from './dto/create-investor-profile.dto.js';
+import { UpdateInvestorProfileDto } from './dto/update-investor-profile.dto.js';
+
+@Controller('investor-profiles')
+export class InvestorProfilesController {
+  constructor(private readonly investorProfilesService: InvestorProfilesService) {}
+
+  @Post()
+  create(@Body() createInvestorProfileDto: CreateInvestorProfileDto) {
+    return this.investorProfilesService.create(createInvestorProfileDto);
+  }
+
+  @Get()
+  findAll() {
+    return this.investorProfilesService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.investorProfilesService.findOne(+id);
+  }
+
+  @Patch(':id')
+  update(@Param('id') id: string, @Body() updateInvestorProfileDto: UpdateInvestorProfileDto) {
+    return this.investorProfilesService.update(+id, updateInvestorProfileDto);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.investorProfilesService.remove(+id);
+  }
+}
+
+
+=== FILE: .\src\investor-profiles\investor-profiles.module.ts ===
+import { Module } from '@nestjs/common';
+import { InvestorProfilesService } from './investor-profiles.service.js';
+import { InvestorProfilesController } from './investor-profiles.controller.js';
+
+@Module({
+  controllers: [InvestorProfilesController],
+  providers: [InvestorProfilesService],
+})
+export class InvestorProfilesModule {}
+
+
+=== FILE: .\src\investor-profiles\investor-profiles.service.ts ===
+import { Injectable } from '@nestjs/common';
+import { CreateInvestorProfileDto } from './dto/create-investor-profile.dto.js';
+import { UpdateInvestorProfileDto } from './dto/update-investor-profile.dto.js';
+
+@Injectable()
+export class InvestorProfilesService {
+  create(createInvestorProfileDto: CreateInvestorProfileDto) {
+    return 'This action adds a new investorProfile';
+  }
+
+  findAll() {
+    return `This action returns all investorProfiles`;
+  }
+
+  findOne(id: number) {
+    return `This action returns a #${id} investorProfile`;
+  }
+
+  update(id: number, updateInvestorProfileDto: UpdateInvestorProfileDto) {
+    return `This action updates a #${id} investorProfile`;
+  }
+
+  remove(id: number) {
+    return `This action removes a #${id} investorProfile`;
+  }
+}
+
+
+=== FILE: .\src\investor-profiles\dto\create-investor-profile.dto.ts ===
+export class CreateInvestorProfileDto {}
+
+
+=== FILE: .\src\investor-profiles\dto\update-investor-profile.dto.ts ===
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateInvestorProfileDto } from './create-investor-profile.dto.js';
+
+export class UpdateInvestorProfileDto extends PartialType(CreateInvestorProfileDto) {}
+
+
+=== FILE: .\src\investor-profiles\entities\investor-profile.entity.ts ===
+
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  OneToOne,
+  OneToMany,
+  JoinColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+  type Relation,
+} from 'typeorm';
+
+import { User } from '../../users/entities/user.entity.js';
+import { Investment } from '../../investments/entities/investment.entity.js';
+
+@Entity('investor_profiles')
+export class InvestorProfile {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({
+    name: 'user_id',
+    type: 'int',
+    unique: true,
+  })
+  userId: number;
+
+  @OneToOne(() => User, {
+    onDelete: 'RESTRICT',
+    nullable: false,
+  })
+  @JoinColumn({ name: 'user_id' })
+  user: Relation<User>;
+
+  @Column({ type: 'text' })
+  address: string;
+
+  @Column({
+    type: 'varchar',
+    length: 100,
+    nullable: true,
+  })
+  occupation: string | null;
+
+  @Column({
+    name: 'investment_interest',
+    type: 'varchar',
+    length: 150,
+    nullable: true,
+  })
+  investmentInterest: string | null;
+
+  @Column({
+    type: 'text',
+    nullable: true,
+  })
+  bio: string | null;
+
+  @CreateDateColumn({
+    name: 'created_at',
+    type: 'timestamp',
+  })
+  createdAt: Date;
+
+  @UpdateDateColumn({
+    name: 'updated_at',
+    type: 'timestamp',
+  })
+  updatedAt: Date;
+
+  @OneToMany(
+    () => Investment,
+    (investment) => investment.investor,
+  )
+  investments: Relation<Investment[]>;
+}
+
+
+=== FILE: .\src\landowner\hiring-requests\hiring-requests.controller.ts ===
+import {
+    Body,
+    Controller,
+    Delete,
+    Get,
+    Param,
+    ParseIntPipe,
+    Patch,
+    Post,
+    Query,
+    UseGuards,} from '@nestjs/common';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard.js';
+import { RolesGuard } from '../../common/guards/roles.guard.js';
+import {
+    APP_ROLES,
+    FarmerOnly,
+    LandownerOnly,
+    Roles,} from '../../common/decorators/roles.decorator.js';
+import { CurrentUser } from '../../common/decorators/current-user.decorator.js';
+import { HiringRequestsService } from './hiring-requests.service.js';
+import { CreateHiringRequestDto } from './dto/create-hiring-request.dto.js';
+import { UpdateHiringRequestDto } from './dto/update-hiring-request.dto.js';
+import { RespondHiringRequestDto } from './dto/respond-hiring-request.dto.js';
+import { QueryHiringRequestDto } from './dto/query-hiring-request.dto.js';
+
+
+    @ApiTags('Hiring Requests')
+    @ApiBearerAuth()
+    @Controller('hiring-requests')
+    @UseGuards(JwtAuthGuard, RolesGuard)
+
+    export class HiringRequestsController {
+        constructor(private readonly hiringRequestsService: HiringRequestsService) {}
+
+    @Post()
+    @LandownerOnly()
+    @ApiOperation({ summary: 'Send a hiring request to a farmer (emails the farmer)' })
+    async create(
+        @Body() dto: CreateHiringRequestDto,
+        @CurrentUser('userId') userId: number,
+    ) {
+        return await this.hiringRequestsService.create(dto, userId);
+    }
+
+
+    @Get()
+    @Roles(APP_ROLES.LANDOWNER, APP_ROLES.FARMER)
+    @ApiOperation({ summary: 'Landowner: requests I sent. Farmer: requests I received' })
+    async findAll(
+        @Query() query: QueryHiringRequestDto,
+        @CurrentUser('userId') userId: number,
+        @CurrentUser('role') role: string,
+    ) {
+        return await this.hiringRequestsService.findAll(query, userId, role);
+    }
+
+    @Get(':id')
+    @Roles(APP_ROLES.LANDOWNER, APP_ROLES.FARMER)
+    @ApiOperation({ summary: 'Get one hiring request' })
+    async findOne(
+        @Param('id', ParseIntPipe) id: number,
+        @CurrentUser('userId') userId: number,
+        @CurrentUser('role') role: string,
+    ) {
+        return await this.hiringRequestsService.findOne(id, userId, role);
+    }
+
+        @Patch(':id/respond')
+        @FarmerOnly()
+        @ApiOperation({ summary: 'Accept or reject (transaction: land becomes occupied on accept)' })
+        async respond(
+            @Param('id', ParseIntPipe) id: number,
+            @Body() dto: RespondHiringRequestDto,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.hiringRequestsService.respond(id, dto, userId);
+        }
+
+        @Patch(':id/cancel')
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Cancel a pending request' })
+        async cancel(
+            @Param('id', ParseIntPipe) id: number,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.hiringRequestsService.cancel(id, userId);
+        }
+
+        @Patch(':id/complete')
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Mark accepted job completed (transaction: land becomes available)' })
+        async complete(
+            @Param('id', ParseIntPipe) id: number,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.hiringRequestsService.complete(id, userId);
+        }
+
+        @Patch(':id')
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Edit a pending request' })
+        async update(
+            @Param('id', ParseIntPipe) id: number,
+            @Body() dto: UpdateHiringRequestDto,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.hiringRequestsService.update(id, dto, userId);
+        }
+
+        @Delete(':id')
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Delete a pending, cancelled or rejected request' })
+        async remove(
+            @Param('id', ParseIntPipe) id: number,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.hiringRequestsService.remove(id, userId);
+        }
+}
+
+=== FILE: .\src\landowner\hiring-requests\hiring-requests.module.ts ===
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { HiringRequest } from './entities/hiring-request.entity.js';
+import { FarmerProfile } from '../../farmer/farmer_profiles/entities/farmer_profile.entity.js';
+import { User } from '../../users/entities/user.entity.js';
+import { HiringRequestsService } from './hiring-requests.service.js';
+import { HiringRequestsController } from './hiring-requests.controller.js';
+import { LandsModule } from '../lands/lands.module.js';
+import { LandownerProfilesModule } from '../landowner-profiles/landowner-profiles.module.js';
+
+@Module({
+    imports: [
+        TypeOrmModule.forFeature([HiringRequest, FarmerProfile, User]),
+        LandsModule,
+        LandownerProfilesModule,
+    ],
+    controllers: [HiringRequestsController],
+    providers: [HiringRequestsService],
+})
+export class HiringRequestsModule {}
+
+=== FILE: .\src\landowner\hiring-requests\hiring-requests.service.ts ===
+import {
+    BadRequestException,
+    ConflictException,
+    ForbiddenException,
+    Injectable,
+    Logger,
+    NotFoundException,} from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { DataSource, FindOptionsWhere, Not, Repository } from 'typeorm';
+import { MailerService } from '@nestjs-modules/mailer';
+import { fileURLToPath } from 'node:url';
+import { HiringRequest, type HiringStatus } from './entities/hiring-request.entity.js';
+import { Land } from '../lands/entities/land.entity.js';
+import { FarmerProfile } from '../../farmer/farmer_profiles/entities/farmer_profile.entity.js';
+import { User } from '../../users/entities/user.entity.js';
+import { CreateHiringRequestDto } from './dto/create-hiring-request.dto.js';
+import { UpdateHiringRequestDto } from './dto/update-hiring-request.dto.js';
+import { RespondHiringRequestDto } from './dto/respond-hiring-request.dto.js';
+import { QueryHiringRequestDto } from './dto/query-hiring-request.dto.js';
+import { LandsService } from '../lands/lands.service.js';
+import { LandownerProfilesService } from '../landowner-profiles/landowner-profiles.service.js';
+
+const template = (name: string) =>
+    fileURLToPath(new URL(`./templates/${name}.hbs`, import.meta.url));
+
+@Injectable()
+export class HiringRequestsService {
+    private readonly logger = new Logger(HiringRequestsService.name);
+
+    constructor(
+        @InjectRepository(HiringRequest)
+        private readonly hiringRequestRepository: Repository<HiringRequest>,
+        
+        @InjectRepository(FarmerProfile)
+        private readonly farmerProfileRepository: Repository<FarmerProfile>,
+
+        @InjectRepository(User)
+        private readonly userRepository: Repository<User>,
+        private readonly landsService: LandsService,
+        private readonly landownerProfilesService: LandownerProfilesService,
+        private readonly dataSource: DataSource,
+        private readonly mailerService: MailerService,
+    ) {}
+
+    async create(dto: CreateHiringRequestDto, userId: number) {
+        const land = await this.landsService.findOwnedLand(dto.land_id, userId);
+        if (land.availability_status !== 'available') {
+            throw new BadRequestException(
+                `Land is ${land.availability_status}; you can only hire for an available land`,
+            );
+        }
+
+        const farmer = await this.farmerProfileRepository.findOneBy({
+            id: dto.farmer_id,
+        });
+
+        if (!farmer) {
+            throw new NotFoundException('Farmer not found');
+        }
+
+        const duplicate = await this.hiringRequestRepository.existsBy({
+            farmer_id: dto.farmer_id,
+            land_id: dto.land_id,
+            status: 'pending',
+        });
+
+        if (duplicate) {
+            throw new ConflictException(
+                'A pending request for this farmer and land already exists',
+            );
+        }
+
+        const request = await this.hiringRequestRepository.save(
+            this.hiringRequestRepository.create({ ...dto, status: 'pending' }),
+        );
+
+        const farmerUser = await this.userRepository.findOneBy({ id: farmer.user_id });
+        const landownerUser = await this.userRepository.findOneBy({ id: userId });
+
+        if (farmerUser) {
+            await this.sendMail(
+                farmerUser.email,
+                'New hiring request on CashiConnect',
+                'hiring-request-received',
+                {
+                    farmerName: farmerUser.full_name,
+                    landownerName: landownerUser?.full_name ?? 'A landowner',
+                    jobTitle: request.job_title,
+                    landName: land.land_name,
+                    location: land.location,
+                    salary: request.proposed_salary,
+                },
+            );
+        }
+
+        return request;
+    }
+
+    async update(id: number, dto: UpdateHiringRequestDto, userId: number) {
+        const request = await this.findOwnedRequest(id, userId);
+            this.assertStatus(request, ['pending'], 'Only a pending request can be edited');
+
+        Object.assign(request, dto);
+        return await this.hiringRequestRepository.save(request);
+    }
+
+    async cancel(id: number, userId: number) {
+        const request = await this.findOwnedRequest(id, userId);
+            this.assertStatus(request, ['pending'], 'Only a pending request can be cancelled');
+
+        request.status = 'cancelled';
+            return await this.hiringRequestRepository.save(request);
+    }
+
+    async complete(id: number, userId: number) {
+        const request = await this.findOwnedRequest(id, userId);
+            this.assertStatus(request, ['accepted'], 'Only an accepted request can be completed');
+
+        await this.dataSource.transaction(async (manager) => {
+            await manager.update(HiringRequest, request.id, { status: 'completed' });
+            await this.landsService.setAvailability(request.land_id, 'available', manager);
+        });
+
+        return await this.findOwnedRequest(id, userId);
+    }
+
+    async remove(id: number, userId: number) {
+        const request = await this.findOwnedRequest(id, userId);
+         this.assertStatus(
+            request,
+            ['pending', 'cancelled', 'rejected'],
+            'Accepted or completed requests are kept as history and cannot be deleted',
+        );
+
+        await this.hiringRequestRepository.remove(request);
+        return { message: 'Hiring request deleted successfully' };
+    }
+
+    async respond(id: number, dto: RespondHiringRequestDto, userId: number) {
+        const farmer = await this.getFarmerProfile(userId);
+
+        const target = await this.hiringRequestRepository.findOneBy({ id });
+
+        if (!target) {
+            throw new NotFoundException('Hiring request not found');
+
+        }
+        if (target.farmer_id !== farmer.id) {
+            throw new ForbiddenException('This request was not sent to you');
+        }
+
+        const result = await this.dataSource.transaction(async (manager) => {
+            const land = await manager.findOne(Land, {
+                where: { id: target.land_id },
+                lock: { mode: 'pessimistic_write' },
+            });
+
+            if (!land) {
+                throw new NotFoundException('Land not found');
+            }
+
+            const request = await manager.findOne(HiringRequest, {
+                where: { id },
+                lock: { mode: 'pessimistic_write' },
+            });
+
+            if (!request) {
+                throw new NotFoundException('Hiring request not found');
+            }
+
+            if (request.status !== 'pending') {
+                throw new ConflictException(`Request is already ${request.status}`);
+            }
+
+            if (dto.status === 'accepted') {
+                if (land.availability_status !== 'available') {
+                    throw new ConflictException('Land is no longer available');
+                }
+
+                land.availability_status = 'occupied';
+                await manager.save(land);
+
+                await manager.update(
+                    HiringRequest,
+                    { land_id: request.land_id, status: 'pending', id: Not(request.id) },
+                    { status: 'rejected' },
+                );
+            }
+
+            request.status = dto.status;
+            return await manager.save(request);
+        });
+
+        await this.notifyLandowner(result.id);
+        return result;
+    }
+
+    async findAll(query: QueryHiringRequestDto, userId: number, role: string) {
+        const where: FindOptionsWhere<HiringRequest> = {};
+
+        if (query.status) where.status = query.status;
+
+        if (role === 'Landowner') {
+            const profile = await this.landownerProfilesService.findByUserId(userId);
+                where.land = { landowner_id: profile.id };
+        } else {
+            const farmer = await this.getFarmerProfile(userId);
+                where.farmer_id = farmer.id;
+        }
+
+        const [data, total] = await this.hiringRequestRepository.findAndCount({
+            where,
+            relations: { land: true },
+            order: { created_at: 'DESC' },
+            skip: (query.page - 1) * query.limit,
+            take: query.limit,
+        });
+
+        return {
+            data,
+            meta: {
+                page: query.page,
+                limit: query.limit,
+                total,
+                totalPages: Math.ceil(total / query.limit),
+            },
+        };
+    }
+
+    async findOne(id: number, userId: number, role: string) {
+
+        if (role === 'Landowner') {
+            return await this.findOwnedRequest(id, userId);
+        }
+
+        const farmer = await this.getFarmerProfile(userId);
+        const request = await this.hiringRequestRepository.findOne({
+            where: { id },
+            relations: { land: true },
+        });
+
+        if (!request) {
+            throw new NotFoundException('Hiring request not found');
+        }
+
+        if (request.farmer_id !== farmer.id) {
+            throw new ForbiddenException('This request was not sent to you');
+        }
+        return request;
+    }
+
+    private async findOwnedRequest(id: number, userId: number) {
+        const profile = await this.landownerProfilesService.findByUserId(userId);
+        const request = await this.hiringRequestRepository.findOne({
+            where: { id },
+            relations: { land: true },
+        });
+
+        if (!request) {
+            throw new NotFoundException('Hiring request not found');
+        }
+
+        if (request.land.landowner_id !== profile.id) {
+            throw new ForbiddenException('This request is not for your land');
+        }
+        return request;
+    }
+
+    private async getFarmerProfile(userId: number) {
+        const farmer = await this.farmerProfileRepository.findOneBy({
+            user_id: userId,
+        });
+
+        if (!farmer) {
+            throw new NotFoundException('Farmer profile not found');
+        }
+        return farmer;
+    }
+
+    private assertStatus(request: HiringRequest, allowed: HiringStatus[], message: string) {
+
+        if (!allowed.includes(request.status)) {
+            throw new BadRequestException(
+                `${message} (current status: ${request.status})`,
+            );
+        }
+    }
+
+    private async notifyLandowner(requestId: number) {
+        const request = await this.hiringRequestRepository.findOne({
+            where: { id: requestId },
+            relations: { land: { landownerProfile: { user: true } } },
+        });
+
+        if (!request) return;
+
+        const farmer = await this.farmerProfileRepository.findOneBy({
+            id: request.farmer_id,
+        });
+        const farmerUser = farmer
+            ? await this.userRepository.findOneBy({ id: farmer.user_id })
+            : null;
+        const landownerUser = request.land.landownerProfile.user;
+
+        await this.sendMail(
+            landownerUser.email,
+            `Your hiring request was ${request.status}`,
+            'hiring-request-responded',
+            {
+                landownerName: landownerUser.full_name,
+                farmerName: farmerUser?.full_name ?? 'The farmer',
+                status: request.status,
+                jobTitle: request.job_title,
+                  landName: request.land.land_name,
+            },
+        );
+    }
+
+    private async sendMail(
+        to: string,
+        subject: string,
+        templateName: string,
+        context: Record<string, unknown>,
+    ) {
+        try {
+            await this.mailerService.sendMail({
+                to,
+                subject,
+                template: template(templateName),
+                context,
+            });
+        }
+        catch (error) {
+            this.logger.error(
+                `Email "${subject}" could not be sent to ${to}`,
+                error instanceof Error ? error.stack : String(error),
+            );
+        }
+    }
+}
+
+=== FILE: .\src\landowner\hiring-requests\dto\create-hiring-request.dto.ts ===
+import { Type } from 'class-transformer';
+import {
+    IsInt,
+    IsNotEmpty,
+    IsNumber,
+    IsPositive,
+    IsString,
+    MaxLength,} from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
+
+export class CreateHiringRequestDto {
+    @ApiProperty({ example: 1, description: 'farmer_profiles.id' })
+    @Type(() => Number)
+    @IsInt()
+    @IsPositive()
+    farmer_id: number;
+
+    @ApiProperty({ example: 1, description: 'One of your own lands' })
+    @Type(() => Number)
+    @IsInt()
+    @IsPositive()
+    land_id: number;
+
+    @ApiProperty({ example: 'Paddy cultivation for Boro season' })
+    @IsString()
+    @IsNotEmpty()
+    @MaxLength(150)
+    job_title: string;
+
+    @ApiProperty({ example: 'Prepare land, plant and take care of paddy.' })
+    @IsString()
+    @IsNotEmpty()
+    description: string;
+
+    @ApiProperty({ example: 12000 })
+    @Type(() => Number)
+    @IsNumber({ maxDecimalPlaces: 2 })
+    @IsPositive()
+    proposed_salary: number;
+}
+
+=== FILE: .\src\landowner\hiring-requests\dto\query-hiring-request.dto.ts ===
+import { IsIn, IsOptional } from 'class-validator';
+import { ApiPropertyOptional } from '@nestjs/swagger';
+import { PaginationQueryDto } from '../../../common/dto/pagination-query.dto.js';
+import { HIRING_STATUS } from '../entities/hiring-request.entity.js';
+
+export class QueryHiringRequestDto extends PaginationQueryDto {
+    @ApiPropertyOptional({ enum: HIRING_STATUS })
+    @IsOptional()
+    @IsIn(HIRING_STATUS)
+    status?: (typeof HIRING_STATUS)[number];
+}
+
+=== FILE: .\src\landowner\hiring-requests\dto\respond-hiring-request.dto.ts ===
+import {IsIn} from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
+
+export const RESPONSE_STATUS = [
+    'accepted',
+    'rejected'
+] as const;
+
+export class RespondHiringRequestDto{
+    @ApiProperty ({enum: RESPONSE_STATUS, example: 'accepted'})
+    @IsIn(RESPONSE_STATUS)
+    status: (typeof RESPONSE_STATUS)[number];
+}
+
+=== FILE: .\src\landowner\hiring-requests\dto\update-hiring-request.dto.ts ===
+import {OmitType, PartialType} from '@nestjs/swagger';
+import { CreateHiringRequestDto } from './create-hiring-request.dto.js';
+
+export class UpdateHiringRequestDto extends PartialType(
+      OmitType(CreateHiringRequestDto, ['farmer_id', 'land_id'] as const),
+) {}
+
+=== FILE: .\src\landowner\hiring-requests\entities\hiring-request.entity.ts ===
+import {Column,
+        Entity,
+        CreateDateColumn,
+        UpdateDateColumn,
+        PrimaryGeneratedColumn,
+        JoinColumn,
+        ManyToOne,
+        type Relation,
+        ValueTransformer,} from 'typeorm';
+import {Land} from '../../lands/entities/land.entity.js';
+import { FarmerProfile } from '../../../farmer/farmer_profiles/entities/farmer_profile.entity.js';
+
+export const HIRING_STATUS = [   
+    'pending',
+    'accepted',
+    'rejected', 
+    'completed',
+    'cancelled',
+] as const;
+
+export type HiringStatus = (typeof HIRING_STATUS)[number];
+
+const decimalToNumber: ValueTransformer = {
+    to: (value?: number | null) => value,
+    from: (value?: string | null) =>
+        value === null || value === undefined ? value : Number(value),
+};
+
+@Entity('hiring_requests')
+export class HiringRequest{
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  farmer_id: number;
+
+  @ManyToOne(() => FarmerProfile,{
+    nullable:false,
+    onDelete: 'RESTRICT',
+  })
+  @JoinColumn({ name: 'farmer_id' })
+  farmerProfile: Relation<FarmerProfile>;
+
+  @Column()
+  land_id: number;
+
+    @ManyToOne(() => Land,{
+    nullable:false,
+    onDelete: 'RESTRICT',
+  })
+  @JoinColumn({ name: 'land_id' })
+  land: Relation<Land>;
+
+    @Column({ type: 'varchar', length:150 })
+    job_title: string;
+
+    @Column ({type :'text'})
+    description: string;
+
+    @Column({ type: 'decimal', precision: 12, scale: 2, transformer: decimalToNumber })
+    proposed_salary: number;
+
+   @Column({ type: 'varchar', length:20, default: 'pending' })
+    status: HiringStatus;
+
+    @CreateDateColumn()
+    created_at: Date;
+
+    @UpdateDateColumn()
+    updated_at: Date;
+
+}
+
+=== FILE: .\src\landowner\land-images\land-images.controller.ts ===
+import {Body,
+        Controller,
+        Delete,
+        Get,
+        Post,
+        Put,
+        Param,
+        Patch,
+        ParseIntPipe,
+        Query,
+        UseGuards } from '@nestjs/common';
+import { ApiBearerAuth,
+         ApiConflictResponse,
+         ApiForbiddenResponse,
+         ApiNotFoundResponse,
+         ApiOperation,
+         ApiTags } from '@nestjs/swagger';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard.js';
+import { RolesGuard } from '../../common/guards/roles.guard.js';
+import {LandownerOnly} from '../../common/decorators/roles.decorator.js';
+import {CurrentUser} from "../../common/decorators/current-user.decorator.js";
+import {LandImagesService} from "./land-images.service.js";
+import {CreateLandImageDto} from "./dto/create-land-image.dto.js";
+import {UpdateLandImageDto} from "./dto/update-land-image.dto.js";
+
+@ApiTags('Land Images')
+@ApiBearerAuth()
+@Controller('land-images')
+@UseGuards(JwtAuthGuard, RolesGuard)
+
+export class LandImagesController {
+    constructor(private readonly landImagesService: LandImagesService) {}
+
+@Post('land-images')
+@LandownerOnly()
+@ApiOperation({ summary: 'Add a new image to my land' })
+async create(
+    @Body() dto: CreateLandImageDto,
+    @CurrentUser('userId') userId: number,
+) {
+    return await this.landImagesService.create(dto, userId);
+}
+
+@Get('land/:id/images')
+@LandownerOnly()
+@ApiOperation({ summary: 'Get all images of a land' })
+async findByLand(@Param('id', ParseIntPipe) landId: number) {
+    return await this.landImagesService.findByLand(landId);
+}
+
+@Patch('land-images/:id')
+@LandownerOnly()
+@ApiOperation({ summary: 'Update an image URL' })
+async update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() dto: UpdateLandImageDto,
+    @CurrentUser('userId') userId: number,
+) {
+    return await this.landImagesService.update(id, dto, userId);
+}
+
+@Delete('land-images/:id')
+@LandownerOnly()
+@ApiOperation({ summary: 'Delete an image' })
+async remove(
+    @Param('id', ParseIntPipe) id: number,
+    @CurrentUser('userId') userId: number,
+) {
+    return await this.landImagesService.remove(id, userId);
+}
+}
+
+
+=== FILE: .\src\landowner\land-images\land-images.module.ts ===
+import {Module} from '@nestjs/common';
+import {TypeOrmModule} from '@nestjs/typeorm';
+import {LandImagesService} from './land-images.service.js';
+import {LandImagesController} from './land-images.controller.js';
+import {LandImage} from './entities/land-image.entity.js';
+import {LandsModule} from '../lands/lands.module.js';
+import {LandownerProfilesModule} from '../landowner-profiles/landowner-profiles.module.js';
+
+@Module({       
+    imports: [TypeOrmModule.forFeature([LandImage]), 
+                LandsModule,
+                LandownerProfilesModule],
+    controllers: [LandImagesController],
+    providers: [LandImagesService],
+})
+export class LandImagesModule {}
+
+=== FILE: .\src\landowner\land-images\land-images.service.ts ===
+import {
+    BadRequestException,
+    ForbiddenException,
+    Injectable,
+    NotFoundException,} from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { LandImage } from './entities/land-image.entity.js';
+import { CreateLandImageDto } from './dto/create-land-image.dto.js';
+import { UpdateLandImageDto } from './dto/update-land-image.dto.js';
+import { LandsService } from '../lands/lands.service.js';
+import { LandownerProfilesService } from '../landowner-profiles/landowner-profiles.service.js';
+
+const MAX_IMAGES_PER_LAND = 10;
+
+@Injectable()
+export class LandImagesService {
+    constructor(
+        @InjectRepository(LandImage)
+        private readonly landImageRepository: Repository<LandImage>,
+        private readonly landsService: LandsService,
+        private readonly landownerProfilesService: LandownerProfilesService,
+    ) {}
+
+    async create(dto: CreateLandImageDto, userId: number) {
+        await this.landsService.findOwnedLand(dto.land_id, userId);
+
+        const count = await this.landImageRepository.countBy({
+            land_id: dto.land_id,
+        });
+        if (count >= MAX_IMAGES_PER_LAND) {
+            throw new BadRequestException(
+                `A land can have at most ${MAX_IMAGES_PER_LAND} images`,
+            );
+        }
+
+        const image = this.landImageRepository.create(dto);
+        return await this.landImageRepository.save(image);
+    }
+
+    async findByLand(landId: number) {
+        await this.landsService.findOne(landId); 
+        return await this.landImageRepository.find({
+            where: { land_id: landId },
+            order: { created_at: 'ASC' },
+        });
+    }
+
+    async update(id: number, dto: UpdateLandImageDto, userId: number) {
+        const image = await this.findOwnedImage(id, userId);
+        image.image_url = dto.image_url;
+        return await this.landImageRepository.save(image);
+    }
+
+    async remove(id: number, userId: number) {
+        const image = await this.findOwnedImage(id, userId);
+        await this.landImageRepository.remove(image);
+        return { message: 'Image deleted successfully' };
+    }
+
+  
+    private async findOwnedImage(id: number, userId: number) {
+        const image = await this.landImageRepository.findOne({
+            where: { id },
+            relations: { land: true },
+        });
+        if (!image) {
+            throw new NotFoundException('Image not found');
+        }
+
+        const profile = await this.landownerProfilesService.findByUserId(userId);
+        if (image.land.landowner_id !== profile.id) {
+            throw new ForbiddenException('You can only manage images of your own land',
+            );
+        }
+        return image;
+    }
+}
+
+
+=== FILE: .\src\landowner\land-images\dto\create-land-image.dto.ts ===
+import {Type} from 'class-transformer';
+import {IsBoolean,
+    IsInt,
+    IsNotEmpty,
+     IsUrl,
+     IsPositive} from 'class-validator';
+import {ApiProperty,
+        ApiPropertyOptional} from '@nestjs/swagger';
+
+export class CreateLandImageDto {
+    @ApiProperty({ example:1 })
+    @Type(() => Number)
+    @IsInt()
+    @IsPositive()
+    land_id: number;
+
+    @ApiProperty({ example:'https://example.com/images/north-field.jpg' })
+    @IsUrl({}, { message: 'image_url must be a valid URL' })
+    @IsNotEmpty()
+    image_url: string;
+
+}
+
+=== FILE: .\src\landowner\land-images\dto\update-land-image.dto.ts ===
+import {IsUrl, 
+        IsNotEmpty, 
+       } from 'class-validator';
+import {ApiProperty} from '@nestjs/swagger';
+
+export class UpdateLandImageDto {
+    @ApiProperty({ example:'https://example.com/images/north-field-2.jpg' })
+    @IsUrl({}, { message: 'image_url must be a valid URL' })
+    @IsNotEmpty()
+    image_url: string;
+
+}
+
+=== FILE: .\src\landowner\land-images\entities\land-image.entity.ts ===
+import {Column,
+        Entity,
+        CreateDateColumn,
+        UpdateDateColumn,
+        PrimaryGeneratedColumn,
+        JoinColumn,
+        ManyToOne,
+        type Relation} from 'typeorm';
+import {Land} from '../../lands/entities/land.entity.js';
+
+@Entity('land_images')
+export class LandImage {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  land_id: number;
+
+    @ManyToOne(() => Land, (land) => land.images, {
+        nullable: false,
+        onDelete: 'CASCADE',
+    })
+    @JoinColumn({ name: 'land_id' })
+    land: Relation<Land>;
+
+    @Column({ type: 'varchar', length: 255 })
+    image_url: string;
+
+    @CreateDateColumn()
+    created_at: Date;
+}
+
+=== FILE: .\src\landowner\landowner-profiles\landowner-profiles.controller.ts ===
+import {Body,
+        Controller,
+        Delete,
+        Get,
+        Post,
+        Put,
+        Param,
+        Patch,
+        ParseIntPipe,
+        Query,
+        UseGuards } from '@nestjs/common';
+import { ApiBearerAuth,
+         ApiConflictResponse,
+         ApiForbiddenResponse,
+         ApiNotFoundResponse,
+         ApiOperation,
+         ApiTags } from '@nestjs/swagger';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard.js';
+import { RolesGuard } from '../../common/guards/roles.guard.js';
+import { APP_ROLES,
+         LandownerOnly,
+         Roles } from '../../common/decorators/roles.decorator.js';
+import { LandownerProfilesService } from './landowner-profiles.service.js';
+import { CreateLandownerProfileDto } from './dto/create-landowner-profile.dto.js'; 
+import { UpdateLandownerProfileDto } from './dto/update-landowner-profile.dto.js';
+import {CurrentUser} from "../../common/decorators/current-user.decorator.js";
+import {PaginationQueryDto} from "../../common/dto/pagination-query.dto.js";
+
+@ApiTags('Landowner Profiles')
+@ApiBearerAuth()
+@Controller('landowner-profiles')
+@UseGuards(JwtAuthGuard, RolesGuard)
+
+export class LandownerProfilesController {
+  constructor(private readonly landownerProfilesService: LandownerProfilesService) {}
+
+  @Post()
+  @LandownerOnly()
+  @ApiOperation({ summary: 'Create a new landowner profile' })  
+  async create(@Body() dto: CreateLandownerProfileDto,
+         @CurrentUser('userId') userId: number) {
+    return this.landownerProfilesService.create(dto, userId);
+  }
+
+  @Get()
+  @Roles(APP_ROLES.ADMIN)
+  @ApiOperation({ summary: 'Get all landowner (Admin)' })
+  async findAll(@Query() query: PaginationQueryDto) {
+    return this.landownerProfilesService.findAll(query);
+  }
+
+  @Get('me')
+  @LandownerOnly()
+  @ApiOperation({ summary: 'Update my landowner profile' })
+  async findMyProfile(@CurrentUser('userId') userId: number) {
+    return this.landownerProfilesService.findByUserId(userId);
+  }
+
+  @Patch(':id')
+  @LandownerOnly()    
+  @ApiOperation({ summary: 'Update my landowner profile' })
+  async update(@Param('id', ParseIntPipe) id: number,
+               @Body() dto: UpdateLandownerProfileDto,
+               @CurrentUser('userId') userId: number) {
+
+    return await this.landownerProfilesService.update(id, dto, userId);
+  }
+
+}
+
+=== FILE: .\src\landowner\landowner-profiles\landowner-profiles.module.ts ===
+import {Module} from '@nestjs/common';
+import {TypeOrmModule} from '@nestjs/typeorm';
+import {LandownerProfilesService} from './landowner-profiles.service.js';
+import {LandownerProfilesController} from './landowner-profiles.controller.js';
+import {LandownerProfile} from './entities/landowner-profile.entity.js';
+
+@Module({
+  imports: [TypeOrmModule.forFeature([LandownerProfile])],
+  controllers: [LandownerProfilesController],   
+    providers: [LandownerProfilesService],
+    exports: [LandownerProfilesService],
+})
+export class LandownerProfilesModule {}
+
+=== FILE: .\src\landowner\landowner-profiles\landowner-profiles.service.ts ===
+import {ConflictException,ForbiddenException, Injectable, NotFoundException} from '@nestjs/common';
+import {InjectRepository} from '@nestjs/typeorm';
+import {Repository} from 'typeorm';
+import {LandownerProfile} from './entities/landowner-profile.entity.js';
+import {CreateLandownerProfileDto} from './dto/create-landowner-profile.dto.js';
+import {UpdateLandownerProfileDto} from './dto/update-landowner-profile.dto.js';
+import {PaginationQueryDto} from '../../common/dto/pagination-query.dto.js';
+
+    
+
+@Injectable()
+export class LandownerProfilesService {
+  constructor(
+    @InjectRepository(LandownerProfile)
+    private readonly landownerProfileRepository: Repository<LandownerProfile>,
+  ) {}
+
+  async create(dto: CreateLandownerProfileDto, userId: number) {
+    const existingProfile = await this.landownerProfileRepository.findOne({where:{ user_id:userId }});
+    if (existingProfile) {
+      throw new ConflictException('Landowner profile already exists');
+    }
+
+    const profile = this.landownerProfileRepository.create({ ...dto, user_id:userId });
+    return await this.landownerProfileRepository.save(profile);
+  }
+
+  async findAll(query: PaginationQueryDto) {
+    const [data, total] = await this.landownerProfileRepository.findAndCount({ 
+        relations: {user: true},
+        order: {created_at: 'DESC'}, 
+        skip: (query.page - 1) * query.limit,
+        take: query.limit,
+
+     });
+    return {
+        data,
+        meta: {
+            page: query.page,
+            limit: query.limit,
+            total,
+            totalPages: Math.ceil(total / query.limit),
+        },
+    };
+  }
+
+  async findByUserId(userId: number) {
+    const profile = await this.landownerProfileRepository.findOneBy({user_id:userId});
+    if (!profile) {
+      throw new NotFoundException('Landowner profile not found');
+    }
+    return profile;
+  }
+
+  async update(id: number, dto: UpdateLandownerProfileDto, userId: number) {
+    const profile = await this.landownerProfileRepository.findOneBy({id});
+    if (!profile) {
+      throw new NotFoundException('Landowner profile not found');
+    }
+    if (profile.user_id !== userId) {
+      throw new ForbiddenException('You are not allowed to update this profile');
+    }
+
+    Object.assign(profile, dto);
+    return await this.landownerProfileRepository.save(profile);
+  } 
+
+}
+
+=== FILE: .\src\landowner\landowner-profiles\dto\create-landowner-profile.dto.ts ===
+import {Type} from 'class-transformer';
+import {IsBoolean,
+    IsInt,
+    IsNotEmpty,
+     IsNumber,
+     IsOptional,
+     IsPositive,
+      IsString, 
+      Min,
+    Max,
+    MaxLength} from 'class-validator';
+import {ApiProperty,
+        ApiPropertyOptional} from '@nestjs/swagger';
+
+    export class CreateLandownerProfileDto {
+        @ApiProperty({ example:'Patuakhali,Barishal' })
+        @IsString()
+        @IsNotEmpty()
+        @MaxLength(100)
+        address: string;
+
+        @ApiProperty({ example:'Businessman' })  
+        @IsOptional()
+        @IsString()
+        @MaxLength(150)
+        occupation: string;
+
+        @ApiPropertyOptional({example:'I own firm land in Patuakhali,Barishal'})
+        @IsOptional()
+        @IsString()
+        @MaxLength(500)
+        bio: string;
+
+    }
+
+=== FILE: .\src\landowner\landowner-profiles\dto\update-landowner-profile.dto.ts ===
+import {PartialType} from '@nestjs/swagger';
+import {CreateLandownerProfileDto} from './create-landowner-profile.dto.js';
+
+export class UpdateLandownerProfileDto extends PartialType(CreateLandownerProfileDto) {}
+
+=== FILE: .\src\landowner\landowner-profiles\entities\landowner-profile.entity.ts ===
+import {Column,
+        Entity,
+        CreateDateColumn,
+        UpdateDateColumn,
+        PrimaryGeneratedColumn,
+        JoinColumn,
+        OneToMany,
+        OneToOne,
+        type Relation} from 'typeorm';
+import {User} from '../../../users/entities/user.entity.js';
+import {Land} from '../../lands/entities/land.entity.js';
+
+@Entity('landowner_profiles')
+export class LandownerProfile {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({ unique: true })
+  user_id: number;
+
+  @OneToOne(() => User, { nullable:false, onDelete: 'RESTRICT' })
+  @JoinColumn({ name: 'user_id' })
+  user: Relation<User>;
+
+    @Column({ type: 'text' })       
+    address: string;
+
+    @Column({ type: 'varchar', length:100, nullable: true })
+    occupation: string;
+
+    @Column({ type: 'text', nullable: true })
+    bio: string;
+
+    @CreateDateColumn()
+    created_at: Date;
+
+    @UpdateDateColumn()
+    updated_at: Date;
+
+    @OneToMany(() => Land, (land) => land.landownerProfile)
+    lands: Relation<Land[]>;
+}
+
+=== FILE: .\src\landowner\lands\lands.controller.ts ===
+import {Body,
+        Controller,
+        Delete,
+        Get,
+        Param,
+        ParseIntPipe,
+        UseGuards,
+        Patch,
+        Post,
+        Query,
+  } from '@nestjs/common';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard.js';
+import { RolesGuard } from '../../common/guards/roles.guard.js';
+import {
+       APP_ROLES,
+       LandownerOnly,
+       Roles,
+  } from '../../common/decorators/roles.decorator.js';
+import { CurrentUser } from '../../common/decorators/current-user.decorator.js';
+import { PaginationQueryDto } from '../../common/dto/pagination-query.dto.js';
+import { LandsService } from './lands.service.js';
+import { CreateLandDto } from './dto/create-land.dto.js';
+import { UpdateLandDto } from './dto/update-land.dto.js';
+import { UpdateAvailabilityDto } from './dto/update-availability.dto.js';
+import { QueryLandDto } from './dto/query-land.dto.js';
+
+       @ApiTags('Lands')
+       @ApiBearerAuth()
+       @Controller('lands')
+       @UseGuards(JwtAuthGuard, RolesGuard)    
+              export class LandsController {
+                 constructor(private readonly landsService: LandsService) {}
+
+        @Post()
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Add a new land' })
+        async create(
+            @Body() dto: CreateLandDto,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.landsService.create(dto, userId);
+        }
+
+            @Get('my')
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Get all my lands' })
+        async findMyLands(
+            @Query() query: PaginationQueryDto,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.landsService.findMyLands(userId, query);
+        }
+
+        @Get()
+        @Roles(APP_ROLES.FARMER, APP_ROLES.ADMIN)
+        @ApiOperation({ summary: 'Search lands (location, soil type, availability)' })
+        async findAll(
+            @Query() query: QueryLandDto,
+            @CurrentUser('role') role: string,
+        ) {
+            return await this.landsService.findAll(query, role);
+        }
+
+        @Get(':id')
+        @ApiOperation({ summary: 'Get land details' })
+        async findOne(@Param('id', ParseIntPipe) id: number) {
+            return await this.landsService.findOne(id);
+        }
+
+        @Patch(':id/availability')
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Change availability (available / unavailable)' })
+        async updateAvailability(
+            @Param('id', ParseIntPipe) id: number,
+            @Body() dto: UpdateAvailabilityDto,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.landsService.updateAvailability(id, dto, userId);
+        }
+
+        @Patch(':id')
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Update my land' })
+        async update(
+            @Param('id', ParseIntPipe) id: number,
+            @Body() dto: UpdateLandDto,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.landsService.update(id, dto, userId);
+        }
+
+        @Delete(':id')
+        @LandownerOnly()
+        @ApiOperation({ summary: 'Delete my land (transaction)' })
+        async remove(
+            @Param('id', ParseIntPipe) id: number,
+            @CurrentUser('userId') userId: number,
+        ) {
+            return await this.landsService.remove(id, userId);
+        }
+}
+
+
+=== FILE: .\src\landowner\lands\lands.module.ts ===
+import {Type} from "class-transformer";
+import {TypeOrmModule} from "@nestjs/typeorm";
+import {Module} from "@nestjs/common";
+import {Land} from "./entities/land.entity.js";
+import {LandsService} from "./lands.service.js";
+import {LandsController} from "./lands.controller.js";
+import {LandownerProfilesModule} from "../landowner-profiles/landowner-profiles.module.js";
+
+@Module({   
+    imports: [TypeOrmModule.forFeature([Land]), LandownerProfilesModule],
+    controllers: [LandsController],
+    providers: [LandsService],  
+    exports: [LandsService],
+})
+export class LandsModule {}
+
+=== FILE: .\src\landowner\lands\lands.service.ts ===
+import { InjectRepository } from '@nestjs/typeorm';
+import {
+    BadRequestException,
+    ForbiddenException,
+    Injectable,
+    NotFoundException,
+} from '@nestjs/common';
+import {
+    DataSource,
+    EntityManager,
+    FindOptionsWhere,
+    ILike,
+    Repository,
+} from 'typeorm';
+import { Land, type LandAvailability } from './entities/land.entity.js';
+import { LandImage } from '../land-images/entities/land-image.entity.js';
+import { CreateLandDto } from './dto/create-land.dto.js';
+import { UpdateLandDto } from './dto/update-land.dto.js';
+import { UpdateAvailabilityDto } from './dto/update-availability.dto.js';
+import { QueryLandDto } from './dto/query-land.dto.js';
+import { PaginationQueryDto } from '../../common/dto/pagination-query.dto.js';
+import { LandownerProfilesService } from '../landowner-profiles/landowner-profiles.service.js';
+
+@Injectable()
+export class LandsService {
+    constructor(
+        @InjectRepository(Land)
+        private readonly landRepository: Repository<Land>,
+        private readonly landownerProfilesService: LandownerProfilesService,
+        private readonly dataSource: DataSource,
+    ) {}
+
+    async create(dto: CreateLandDto, userId: number) {
+        const profile = await this.landownerProfilesService.findByUserId(userId);
+
+        const land = this.landRepository.create({
+            ...dto,
+            landowner_id: profile.id,
+        });
+        return await this.landRepository.save(land);
+    }
+
+    async findMyLands(userId: number, query: PaginationQueryDto) {
+        const profile = await this.landownerProfilesService.findByUserId(userId);
+
+        const [data, total] = await this.landRepository.findAndCount({
+            where: { landowner_id: profile.id },
+            order: { created_at: 'DESC' },
+            skip: (query.page - 1) * query.limit,
+            take: query.limit,
+        });
+
+        return {
+            data,
+            meta: {
+                page: query.page,
+                limit: query.limit,
+                total,
+                totalPages: Math.ceil(total / query.limit),
+            },
+        };
+    }
+
+       async findAll(query: QueryLandDto, role: string) {
+        const where: FindOptionsWhere<Land> = {};
+
+        if (query.location) where.location = ILike(`%${query.location}%`);
+        if (query.soil_type) where.soil_type = ILike(`%${query.soil_type}%`);
+
+        if (role === 'Farmer') {
+            where.availability_status = 'available';
+        } else if (query.availability_status) {
+            where.availability_status = query.availability_status;
+        }
+
+        const [data, total] = await this.landRepository.findAndCount({
+            where,
+            order: { created_at: 'DESC' },
+            skip: (query.page - 1) * query.limit,
+            take: query.limit,
+        });
+
+        return {
+            data,
+            meta: {
+                page: query.page,
+                limit: query.limit,
+                total,
+                totalPages: Math.ceil(total / query.limit),
+            },
+        };
+    }
+
+    async findOne(id: number) {
+        const land = await this.landRepository.findOneBy({ id });
+        if (!land) {
+            throw new NotFoundException('Land not found');
+        }
+        return land;
+    }
+
+    async update(id: number, dto: UpdateLandDto, userId: number) {
+        const land = await this.findOwnedLand(id, userId);
+        Object.assign(land, dto);
+        return await this.landRepository.save(land);
+    }
+
+    async updateAvailability(id: number, dto: UpdateAvailabilityDto, userId: number) {
+        const land = await this.findOwnedLand(id, userId);
+
+        if (
+            land.availability_status === 'reserved' ||
+            land.availability_status === 'occupied'
+        ) {
+            throw new BadRequestException(
+                `Land is ${land.availability_status} and cannot be changed now`,
+            );
+        }
+
+        land.availability_status = dto.availability_status;
+        return await this.landRepository.save(land);
+    }
+
+       async remove(id: number, userId: number) {
+        const land = await this.findOwnedLand(id, userId);
+
+        await this.dataSource.transaction(async (manager) => {
+            await manager.delete(LandImage, { land_id: land.id });
+            await manager.delete(Land, { id: land.id });
+        });
+
+        return { message: 'Land and its images deleted successfully' };
+    }
+
+
+
+    async findAvailableById(id: number) {
+        const land = await this.findOne(id);
+        if (land.availability_status !== 'available') {
+            throw new BadRequestException('Land is not available');
+        }
+        return land;
+    }
+
+        async setAvailability(id: number, status: LandAvailability, manager?: EntityManager) {
+        const repo = manager ? manager.getRepository(Land) : this.landRepository;
+        const land = await repo.findOneBy({ id });
+        if (!land) {
+            throw new NotFoundException('Land not found');
+        }
+        land.availability_status = status;
+        return await repo.save(land);
+    }
+
+       async findOwnedLand(id: number, userId: number) {
+        const profile = await this.landownerProfilesService.findByUserId(userId);
+        const land = await this.findOne(id);
+        if (land.landowner_id !== profile.id) {
+            throw new ForbiddenException('You can only manage your own land');
+        }
+        return land;
+    }
+}
+
+=== FILE: .\src\landowner\lands\dto\create-land.dto.ts ===
+import { Type } from 'class-transformer';
+import {
+    IsIn,
+    IsNotEmpty,
+    IsNumber,
+    IsOptional,
+    IsPositive,
+    IsString,
+    MaxLength,
+    Min,
+} from 'class-validator';
+import { ApiProperty,
+         ApiPropertyOptional } from '@nestjs/swagger';
+
+export const SIZE_UNITS = ['bigha', 'acre', 'decimal', 'katha'] as const;
+
+export class CreateLandDto {
+
+    @ApiProperty({ example: 'North Field' })
+    @IsString()
+    @IsNotEmpty()
+    @MaxLength(150)
+    land_name: string;
+
+    @ApiProperty({ example: 'Patuakhali,Barishal' })
+    @IsString()
+    @IsNotEmpty()
+    @MaxLength(255)
+    location: string;
+
+    @ApiProperty({ example: 2.5 })
+    @Type(() => Number)
+    @IsNumber({ maxDecimalPlaces: 2 })
+    @IsPositive()
+    land_size: number;
+
+    @ApiProperty({ enum: SIZE_UNITS, example: 'bigha' })
+    @IsIn(SIZE_UNITS)
+    size_unit: string;
+
+    @ApiProperty({ example: 'Loamy' })
+    @IsString()
+    @IsNotEmpty()
+    @MaxLength(100)
+    soil_type: string;
+
+    @ApiProperty({ example: 15000 })
+    @Type(() => Number)
+    @IsNumber({ maxDecimalPlaces: 2 })
+    @Min(0)
+    rental_price: number;
+
+    @ApiPropertyOptional({ example: 'Irrigation facility available' })
+    @IsOptional()
+    @IsString()
+    description?: string;
+}
+
+=== FILE: .\src\landowner\lands\dto\query-land.dto.ts ===
+import {IsIn, 
+        IsOptional, 
+        IsString,} from 'class-validator';
+import {ApiPropertyOptional} from '@nestjs/swagger';
+import {LAND_AVAILABILITY} from '../entities/land.entity.js';
+import{PaginationQueryDto} from '../../../common/dto/pagination-query.dto.js';
+
+export class QueryLandDto extends PaginationQueryDto {
+    @ApiPropertyOptional({example: 'Patuakhali' })
+    @IsString()
+    @IsOptional()
+    location?: string;
+
+    @ApiPropertyOptional({example: 'Loamy' })
+    @IsString()
+    @IsOptional()
+    soil_type?: string;
+
+    @ApiPropertyOptional({ enum: LAND_AVAILABILITY })
+    @IsString()
+    @IsOptional()
+    @IsIn(LAND_AVAILABILITY)
+    availability_status?: (typeof LAND_AVAILABILITY)[number];
+}
+
+=== FILE: .\src\landowner\lands\dto\update-availability.dto.ts ===
+import {IsIn, IsNotEmpty,IsString} from 'class-validator';
+import {ApiProperty} from '@nestjs/swagger';
+
+export const AVAILABILITY_STATUS = ['available', 'unavailable'] as const;
+
+export class UpdateAvailabilityDto {
+    @ApiProperty({ enum: AVAILABILITY_STATUS, example: 'available' })
+    @IsString()
+    @IsNotEmpty()
+    @IsIn(AVAILABILITY_STATUS)
+    availability_status: (typeof AVAILABILITY_STATUS)[number];    
+}
+
+=== FILE: .\src\landowner\lands\dto\update-land.dto.ts ===
+import {PartialType} from '@nestjs/swagger';
+import {CreateLandDto} from './create-land.dto.js';
+
+export class UpdateLandDto extends PartialType(CreateLandDto) {}
+
+=== FILE: .\src\landowner\lands\entities\land.entity.ts ===
+import {Column,
+        Entity,
+        CreateDateColumn,
+        UpdateDateColumn,
+        PrimaryGeneratedColumn,
+        JoinColumn,
+        ManyToOne,
+        type Relation,
+        ValueTransformer,
+        OneToMany} from 'typeorm';
+import { LandownerProfile } from '../../landowner-profiles/entities/landowner-profile.entity.js';
+import {LandImage} from '../../land-images/entities/land-image.entity.js';
+
+export const LAND_AVAILABILITY = [   
+    'available',
+    'unavailable',
+    'occupied',
+    'reserved',
+] as const;
+
+export type LandAvailability = (typeof LAND_AVAILABILITY)[number];
+
+const decimalToNumber: ValueTransformer = {
+    to: (value: number|null) => value,
+    from: (value: string|null) => 
+        value === null || value === undefined ? value : Number(value),
+};
+
+@Entity('lands')
+export class Land {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  landowner_id: number;
+
+  @ManyToOne(() => LandownerProfile, (profile)=>profile.lands,{
+    nullable:false,
+    onDelete: 'RESTRICT',
+  })
+  @JoinColumn({ name: 'landowner_id' })
+  landownerProfile: Relation<LandownerProfile>;
+
+    @Column({ type: 'varchar', length:150 })
+    land_name: string;
+
+    @Column({ type: 'varchar', length:200 })
+    location: string;
+
+    @Column({ type: 'decimal', precision: 10, scale: 2, transformer: decimalToNumber })
+    land_size: number;
+
+   @Column({ type: 'varchar', length:20 })
+    size_unit: string;
+
+    @Column({ type: 'varchar', length:100 })
+    soil_type: string;
+
+    @Column({ type: 'decimal', precision: 10, scale: 2, transformer: decimalToNumber })
+    rental_price: number;
+
+    @Column ({type :'text', nullable:true})
+    description: string;
+
+    @Column({ type: 'varchar', length: 30, default: 'available' })
+    availability_status: LandAvailability;
+
+    @CreateDateColumn()
+    created_at: Date;
+
+    @UpdateDateColumn()
+    updated_at: Date;
+
+    @OneToMany(() => LandImage, (image) => image.land)
+    images: Relation<LandImage[]>;
+}
+
+=== FILE: .\src\reports\reports.controller.ts ===
+import { Body, Controller, Get, Param, ParseIntPipe, Patch, Post, Query, UseGuards } from '@nestjs/common';
+import { ReportsService } from './reports.service.js';
+import { CreateReportDto } from './dto/create-report.dto.js';
+import { ReportQueryDto } from './dto/report-query.dto.js';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard.js';
+import { RolesGuard } from '../common/guards/roles.guard.js';
+import { APP_ROLES, Roles } from '../common/decorators/roles.decorator.js';
+import { CurrentUser } from '../common/decorators/current-user.decorator.js';
+import {UpdateReportStatusDto } from './dto/update-report-status.dto.js'
+
+
+@Controller('reports')
+@UseGuards(JwtAuthGuard, RolesGuard)
+export class ReportsController {
+
+  constructor(private readonly reportsService: ReportsService) {}
+
+  @Post()
+  create( @Body() dto: CreateReportDto,  @CurrentUser('userId') userId: number ) {
+    return this.reportsService.create(dto, userId);
+  }
+
+  @Get()
+  findAll(
+    @Query() query: ReportQueryDto,
+    @CurrentUser('userId') userId: number,
+    @CurrentUser('role') role: string,
+  ) {
+    return this.reportsService.findAll(query, userId, role);
+  }
+
+  @Patch(':id/status')
+  @Roles(APP_ROLES.ADMIN)
+  updateStatus(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() dto: UpdateReportStatusDto,
+  ) {
+    return this.reportsService.updateStatus(id, dto);
+  }
+}
+
+=== FILE: .\src\reports\reports.module.ts ===
+
+import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ReportsController } from './reports.controller.js';
+import { ReportsService } from './reports.service.js';
+import { Report } from './entities/report.entity.js';
+import { User } from '../users/entities/user.entity.js';
+
+@Module({
+  imports: [TypeOrmModule.forFeature([Report, User])],
+  controllers: [ReportsController],
+  providers: [ReportsService],
+})
+export class ReportsModule {}
+
+=== FILE: .\src\reports\reports.service.ts ===
+import { BadRequestException, Injectable, NotFoundException, ConflictException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Report } from './entities/report.entity.js';
+import { CreateReportDto } from './dto/create-report.dto.js';
+import { ReportQueryDto } from './dto/report-query.dto.js';
+import { User } from '../users/entities/user.entity.js';
+import { APP_ROLES } from '../common/decorators/roles.decorator.js';
+import {UpdateReportStatusDto } from './dto/update-report-status.dto.js'
+
+
+
+
+@Injectable()
+export class ReportsService {
+
+  constructor(
+    @InjectRepository(Report)  private readonly reportRepository: Repository<Report>,
+    @InjectRepository(User)    private readonly userRepository: Repository<User>,
+  ) {}
+
+
+  async create(dto: CreateReportDto, reporterId: number) {
+    const { reportedUserID , project_id, subject, description } = dto;
+
+    let hasUser = false;
+    let hasProject = false;
+    if (reportedUserID !== undefined) hasUser = true;
+    if (project_id !== undefined) hasProject = true;
+
+    if(hasUser === hasProject) {
+      throw new BadRequestException('Report must be about either a user (reportedUserID) or a project (project_id), not both', );
+    }
+
+    if(hasUser) {
+      if (reportedUserID === reporterId) {
+        throw new BadRequestException('You cannot report yourself');
+      }
+
+      const exists = await this.userRepository.exists({
+        where: { id: reportedUserID },
+      });
+
+      if (!exists) {
+        throw new NotFoundException( `User with id ${reportedUserID} not found`, );
+      }
+    }
+
+    const reportData = this.reportRepository.create({
+      reporter: { id: reporterId },
+      ...(hasUser && { reported_user: { id: reportedUserID } }),
+      ...(hasProject && { project: { id: project_id } }),
+      subject,
+      description,
+      status: 'pending',
+    });
+    const report = await this.reportRepository.save(reportData);
+
+    return {
+      id: report.id,
+      reportedUserID: reportedUserID ?? null,
+      project_id: project_id ?? null,
+      subject: report.subject,
+      description: report.description,
+      status: report.status,
+      created_at: report.created_at,
+    };
+  }
+
+
+  async findAll({ page, limit, status }: ReportQueryDto, userId: number, role: string) {
+    const isAdmin = role === APP_ROLES.ADMIN;
+
+    const [data, total] = await this.reportRepository.findAndCount({
+      where: {
+        ...(status && { status }),
+        ...(!isAdmin && { reporter: { id: userId } }),
+      },
+      relations: { reporter: true, reported_user: true, project: true },
+      select: {
+        id: true,
+        subject: true,
+        description: true,
+        status: true,
+        admin_note: true,
+        created_at: true,
+        reporter: { id: true, full_name: true },
+        reported_user: { id: true, full_name: true },
+        project: { id: true },
+      },
+      order: { id: 'DESC' },
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+
+    return {
+      data,
+      meta: { total, page, limit, totalPages: Math.ceil(total / limit) },
+    };
+  }
+
+  
+  async updateStatus(id: number, dto: UpdateReportStatusDto) {
+    const report = await this.reportRepository.findOne({ where: { id },  select: { id: true, status: true } });
+
+    if (!report) {
+      throw new NotFoundException(`Report with id ${id} not found`);
+    }
+
+    if (report.status === 'solved' || report.status === 'rejected') {
+      throw new ConflictException(`Report is already ${report.status}`);
+    }
+
+    await this.reportRepository.update(id, {
+      status: dto.status,
+      ...(dto.admin_note !== undefined && { admin_note: dto.admin_note }),
+    });
+
+    return { id, status: dto.status };
+  }
+
+}
+
+=== FILE: .\src\reports\dto\create-report.dto.ts ===
+
+import { IsInt, IsNotEmpty, IsOptional, IsString, MaxLength } from 'class-validator';
+
+export class CreateReportDto {
+  @IsOptional()
+  @IsInt()
+  reportedUserID?: number;
+
+  @IsOptional()
+  @IsInt()
+  project_id?: number;
+
+  @IsString()
+  @IsNotEmpty()
+  @MaxLength(150)
+  subject: string;
+
+  @IsString()
+  @IsNotEmpty()
+  description: string;
+}
+
+=== FILE: .\src\reports\dto\report-query.dto.ts ===
+
+import { IsIn, IsOptional } from 'class-validator';
+import { PaginationQueryDto } from '../../common/dto/pagination-query.dto.js';
+
+export class ReportQueryDto extends PaginationQueryDto {
+  @IsOptional()
+  @IsIn(['pending', 'reviewing', 'solved', 'rejected'])
+  status?: string;
+}
+
+=== FILE: .\src\reports\dto\update-report-status.dto.ts ===
+
+import { IsIn, IsOptional, IsString } from 'class-validator';
+
+export class UpdateReportStatusDto {
+  @IsIn(['reviewing', 'solved', 'rejected'])
+  status: string;
+
+  @IsOptional()
+  @IsString()
+  admin_note?: string;
+}
+
+=== FILE: .\src\reports\entities\report.entity.ts ===
+
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, type Relation,
+} from 'typeorm';
+import { User } from '../../users/entities/user.entity.js';
+import { FarmingProjects } from '../../farmer/farming_projects/entities/farming_projects.entity.js';
+
+
+
+@Entity('reports')
+export class Report {
+
+    @PrimaryGeneratedColumn()
+    id: number;
+
+    @ManyToOne(() => User, { nullable: false, onDelete: 'RESTRICT' })
+    @JoinColumn({ name: 'reporter_id' })
+    reporter: Relation<User>;
+
+    @ManyToOne(() => User, { nullable: true, onDelete: 'RESTRICT' })
+    @JoinColumn({ name: 'reported_user_id' })
+    reported_user: Relation<User> | null;
+
+    @ManyToOne(() => FarmingProjects, { nullable: true, onDelete: 'RESTRICT' })
+    @JoinColumn({ name: 'project_id' })
+    project: Relation<FarmingProjects> | null;
+
+    @Column({ length: 150 })
+    subject: string;
+
+    @Column({ type: 'text' })
+    description: string;
+
+    @Column({ length: 30, default: 'pending' })
+    status: string;
+
+    @Column({ type: 'text', nullable: true })
+    admin_note: string | null;
+
+    @CreateDateColumn()
+    created_at: Date;
+}
+
+=== FILE: .\src\roles\roles.controller.ts ===
+import { Body, Controller, Get, Param, ParseIntPipe, Post, Query, UseGuards } from '@nestjs/common';
+import { RolesService } from './roles.service.js';
+import { CreateRoleDto } from './dto/create-role.dto.js';
+import { PaginationQueryDto } from '../common/dto/pagination-query.dto.js';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard.js';
+import { RolesGuard } from '../common/guards/roles.guard.js';
+import { APP_ROLES, Roles } from '../common/decorators/roles.decorator.js';
+
+@Controller('roles')
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles(APP_ROLES.ADMIN)
+export class RolesController {
+  constructor(private readonly rolesService: RolesService) {}
+
+  @Post()
+  create(@Body() dto: CreateRoleDto) {
+    return this.rolesService.create(dto);
+  }
+
+  @Get()
+  findAll(@Query() query: PaginationQueryDto) {
+    return this.rolesService.findAll(query);
+  }
+
+  @Get(':id')
+  findOne(@Param('id', ParseIntPipe) id: number) {
+    return this.rolesService.findOne(id);
+  }
+}
+
+=== FILE: .\src\roles\roles.module.ts ===
+import { Module } from '@nestjs/common';
+import { RolesService } from './roles.service.js';
+import { RolesController } from './roles.controller.js';
+import { Role } from './entities/roles.entity.js';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+@Module({
+  imports: [
+    TypeOrmModule.forFeature([Role]),
+  ],
+  controllers: [RolesController],
+  providers: [RolesService],
+})
+export class RolesModule {}
+
+=== FILE: .\src\roles\roles.service.ts ===
+import { ConflictException, ForbiddenException, Injectable, NotFoundException,
+} from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Role } from './entities/roles.entity.js';
+import { User } from '../users/entities/user.entity.js';
+import { CreateRoleDto } from './dto/create-role.dto.js';
+import { UpdateRoleDto } from './dto/update-role.dto.js';
+import { PaginationQueryDto } from '../common/dto/pagination-query.dto.js';
+
+
+
+
+@Injectable()
+export class RolesService {
+  
+    constructor( @InjectRepository(Role)  private readonly roleRepository: Repository<Role>,) {}
+
+
+  async create(dto: CreateRoleDto) {
+    const exists = await this.roleRepository.findOneBy({ name: dto.name });
+    if(exists) {
+      throw new ConflictException('Role name already exists');
+    }
+    const role = this.roleRepository.create(dto);
+    return this.roleRepository.save(role);
+  }
+
+
+  async findAll({ page, limit }: PaginationQueryDto) {
+    const [data, total] = await this.roleRepository.findAndCount({
+      order: { id: 'ASC' },
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+
+    return {
+      data,
+      meta: { total, page, limit, totalPages: Math.ceil(total / limit) },
+    };
+  }
+
+
+
+  async findOne(id: number) {
+    const role = await this.roleRepository.findOneBy({ id });
+    if (!role) {
+      throw new NotFoundException('Role not found');
+    }
+    return role;
+  }
+
+
+}
+
+=== FILE: .\src\roles\dto\create-role.dto.ts ===
+import { IsNotEmpty, IsOptional, IsString, MaxLength } from 'class-validator';
+
+export class CreateRoleDto {
+  @IsString()
+  @IsNotEmpty()
+  @MaxLength(50)
+  name: string;
+
+  @IsOptional()
+  @IsString()
+  description?: string;
+}
+
+=== FILE: .\src\roles\dto\update-role.dto.ts ===
+import { PartialType } from '@nestjs/mapped-types';
+import { CreateRoleDto } from './create-role.dto.js';
+
+export class UpdateRoleDto extends PartialType(CreateRoleDto) {
+
+    
+}
+
+=== FILE: .\src\roles\entities\roles.entity.ts ===
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, CreateDateColumn,
+} from 'typeorm';
+
+import { User } from '../../users/entities/user.entity.js';
+
+@Entity('roles')
+export class Role {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({ unique: true, length: 50 })
+  name: string;
+
+  @Column({ type: 'text', nullable: true })
+  description: string;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @OneToMany(() => User, (user) => user.role)
+  users: User[];
+}
+
+=== FILE: .\src\users\users.controller.ts ===
+import { Body, Controller,Get,Param, ParseIntPipe, Patch, Query, UseGuards,
+} from '@nestjs/common';
+import { UsersService } from './users.service.js';
+import { UserQueryDto } from './dto/user-query.dto.js';
+import { UpdateUserStatusDto } from './dto/update-user-status.dto.js';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard.js';
+import { RolesGuard } from '../common/guards/roles.guard.js';
+import { APP_ROLES, Roles } from '../common/decorators/roles.decorator.js';
+import { CurrentUser } from '../common/decorators/current-user.decorator.js';
+
+@Controller('users')
+@UseGuards(JwtAuthGuard, RolesGuard)
+export class UsersController {
+  constructor(private readonly usersService: UsersService) {}
+
+  @Get()
+  @Roles(APP_ROLES.ADMIN)
+  findAll(@Query() query: UserQueryDto) {
+    return this.usersService.findAll(query);
+  }
+
+  @Patch(':id/status')
+  @Roles(APP_ROLES.ADMIN)
+  updateStatus(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() dto: UpdateUserStatusDto,
+    @CurrentUser('userId') adminId: number,
+  ) {
+    return this.usersService.updateStatus(id, dto, adminId);
+  }
+}
+
+=== FILE: .\src\users\users.module.ts ===
+import { Module } from '@nestjs/common';
+import { UsersService } from './users.service.js';
+import { UsersController } from './users.controller.js';
+import { User } from './entities/user.entity.js';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ActivityLogsModule } from '../activity-logs/activity-logs.module.js';
+
+
+@Module({
+  
+  imports: [TypeOrmModule.forFeature([User]), ActivityLogsModule],
+  controllers: [UsersController],
+  providers: [UsersService],
+})
+
+export class UsersModule {}
+
+=== FILE: .\src\users\users.service.ts ===
+import {
+  BadRequestException, ConflictException, Injectable, NotFoundException,
+} from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { DataSource, Repository } from 'typeorm';
+import { User } from './entities/user.entity.js';
+import { UserQueryDto } from './dto/user-query.dto.js';
+import { UpdateUserStatusDto } from './dto/update-user-status.dto.js';
+import { ActivityLogsService } from '../activity-logs/activity-logs.service.js';
+
+
+
+@Injectable()
+export class UsersService {
+
+  constructor(
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>,
+    private readonly dataSource: DataSource,
+    private readonly activityLogsService: ActivityLogsService,
+  ) { }
+
+
+
+  async findAll({ page, limit, role, status }: UserQueryDto) {
+    const [data, total] = await this.userRepository.findAndCount({
+      where: {
+        ...(status && { status }),
+        ...(role && { role: { name: role } }),
+      },
+      relations: { role: true },
+      select: {
+        id: true,
+        full_name: true,
+        email: true,
+        phone: true,
+        status: true,
+        created_at: true,
+        updated_at: true,
+        role: { id: true, name: true },
+      },
+      order: { id: 'ASC' },
+      skip: (page - 1) * limit,
+      take: limit,
+    });
+
+    return {
+      data,
+      meta: { total, page, limit, totalPages: Math.ceil(total / limit) },
+    };
+  }
+
+
+
+  async updateStatus(id: number, dto: UpdateUserStatusDto, adminId: number) {
+    if(id === adminId) {
+      throw new BadRequestException('You cannot change your own status');
+    }
+
+    return this.dataSource.transaction( async (manager) => {
+      const user = await manager.findOne(User, {
+        where: { id },
+        select: { id: true, status: true },
+      });
+
+      if(!user) {
+        throw new NotFoundException(`User with id ${id} not found`);
+      }
+
+      if (user.status === dto.status) {
+        throw new ConflictException(`User is already ${dto.status}`);
+      }
+
+      await manager.update(User, { id }, { status: dto.status });
+
+      await this.activityLogsService.log(
+        {
+          adminId,
+          action: `User status changed: ${user.status} -> ${dto.status}`,
+          entityType: 'user',
+          entityId: id,
+        },
+        manager,
+      );
+
+      return { id, status: dto.status };
+    });
+  }
+
+}
+
+=== FILE: .\src\users\dto\update-user-status.dto.ts ===
+import { IsIn } from 'class-validator';
+
+export class UpdateUserStatusDto {
+  @IsIn(['active', 'inactive', 'suspended'])
+  status: string;
+  
+}
+
+=== FILE: .\src\users\dto\user-query.dto.ts ===
+import { IsIn, IsOptional } from 'class-validator';
+import { PaginationQueryDto } from '../../common/dto/pagination-query.dto.js';
+import { APP_ROLES } from '../../common/decorators/roles.decorator.js';
+
+
+export class UserQueryDto extends PaginationQueryDto {
+  @IsOptional()
+  @IsIn(Object.values(APP_ROLES))
+  role?: string;
+
+  @IsOptional()
+  @IsIn(['active', 'inactive', 'suspended'])
+  status?: string;
+}
+
+=== FILE: .\src\users\entities\user.entity.ts ===
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn, CreateDateColumn,
+  UpdateDateColumn
+} from 'typeorm';
+import { Exclude } from 'class-transformer';
+import { Role } from '../../roles/entities/roles.entity.js';
+
+
+@Entity('users')
+export class User {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @ManyToOne(() => Role, (role) => role.users, { nullable: false, onDelete: 'RESTRICT' })
+  @JoinColumn({ name: 'role_id' })
+  role: Role;
+
+  @Column({ length: 100 })
+  full_name: string;
+
+  @Column({ unique: true, length: 150 })
+  email: string;
+
+  @Exclude()
+  @Column({ length: 255 })
+  password: string;
+
+  @Column({ unique: true, length: 20 })
+  phone: string;
+
+  @Column({ length: 20, default: 'active' })
+  status: string;
+
+  @CreateDateColumn()
+  created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
+}
+
+=== FILE: .\package.json ===
+{
+  "name": "cashiconnect-api",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "build": "nest build",
+    "deploy": "nest deploy",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "oxlint src/ test/",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cov": "vitest run --coverage",
+    "test:debug": "vitest --inspect-brk --no-file-parallelism",
+    "test:e2e": "vitest run --config ./vitest.config.e2e.ts"
+  },
+  "dependencies": {
+    "@nestjs-modules/mailer": "^4.0.0",
+    "@nestjs/common": "^12.0.1",
+    "@nestjs/config": "^12.1.1",
+    "@nestjs/core": "^12.0.1",
+    "@nestjs/jwt": "^12.0.5",
+    "@nestjs/mapped-types": "^12.0.1",
+    "@nestjs/passport": "^12.0.2",
+    "@nestjs/platform-express": "^12.0.1",
+    "@nestjs/swagger": "^12.1.2",
+    "@nestjs/typeorm": "^12.0.3",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "handlebars": "^4.7.10",
+    "nodemailer": "^10.3.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "pg": "^8.23.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1",
+    "typeorm": "^1.1.3"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^12.0.0",
+    "@nestjs/mau": "^0.2.6",
+    "@nestjs/schematics": "^12.0.0",
+    "@nestjs/testing": "^12.0.1",
+    "@types/bcrypt": "^6.0.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "@types/nodemailer": "^8.0.2",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/supertest": "^7.0.0",
+    "@vitest/coverage-v8": "^4.1.2",
+    "oxlint": "^1.58.0",
+    "prettier": "^3.4.2",
+    "source-map-support": "^0.5.21",
+    "supertest": "^7.0.0",
+    "typescript": "^6.0.2",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^4.1.2"
+  }
+}
+
+
+=== FILE: .\tsconfig.json ===
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "resolvePackageJsonExports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2023",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "types": ["vitest/globals", "node"]
+  }
+}
+
+
+=== FILE: .\nest-cli.json ===
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "assets": ["**/*.hbs"],
+    "watchAssets": true
+  }
+}
+
+
+=== FILE: .env.example ===
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=your-password
+DB_DATABASE=cashiconnect
+JWT_SECRET=your-secret-key
+JWT_EXPIRES_IN=15m
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_SECURE=false
+MAIL_USER=your-mailtrap-smtp-username
+MAIL_PASSWORD=your-mailtrap-smtp-password
+MAIL_FROM=CashiConnect <no-reply@cashiconnect.local>
+

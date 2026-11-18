@@ -6,51 +6,57 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { RolesModule } from './roles/roles.module.js';
 import { UsersModule } from './users/users.module.js';
-
+import { validateEnv } from './config/env.validation.js';
 import { FarmerProfilesModule } from './farmer/farmer_profiles/farmer_profiles.module.js';
 import { FarmingProjectsModule } from './farmer/farming_projects/farming_projects.module.js';
 import { ProjectUpdatesModule } from './farmer/project_updates/project_updates.module.js';
 import { HarvestsModule } from './farmer/harvests/harvests.module.js';
+import { LandownerProfilesModule } from './landowner/landowner-profiles/landowner-profiles.module.js';
+import { LandImagesModule } from './landowner/land-images/land-images.module.js';
+import { LandsModule } from './landowner/lands/lands.module.js';
+import { HiringRequestsModule } from './landowner/hiring-requests/hiring-requests.module.js';
+import { ActivityLogsModule } from './activity-logs/activity-logs.module.js';
+import { ReportsModule } from './reports/reports.module.js';
+import { InvestorProfilesModule } from './investor-profiles/investor-profiles.module.js';
+import { InvestmentsModule } from './investments/investments.module.js';
+import { InvestmentTransactionsModule } from './investment-transactions/investment-transactions.module.js';
+import { InvestmentReturnsModule } from './investment-returns/investment-returns.module.js';
 
 @Module({
-  imports: [AuthModule,
-    ConfigModule.forRoot({
-      isGlobal: true,
-    }),
+  imports: [ConfigModule.forRoot({ isGlobal: true, validate: validateEnv }),
+    AuthModule,
     TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
-      inject: [ConfigService],
-
-      useFactory: (config: ConfigService) => ({
-        type: 'postgres',
-        host: config.get<string>('DB_HOST'),
-        port: config.get<number>('DB_PORT'),
-        username: config.get<string>('DB_USERNAME'),
-        password: config.get<string>('DB_PASSWORD'),
-        database: config.get<string>('DB_DATABASE'),
-        autoLoadEntities: true,
-        synchronize: true,
-      }),
+    imports: [ConfigModule],
+    inject: [ConfigService],
+    useFactory: (config: ConfigService) => ({
+      type: 'postgres',
+      host: config.get<string>('DB_HOST'),
+      port: config.get<number>('DB_PORT'),
+      username: config.get<string>('DB_USERNAME'),
+      password: config.get<string>('DB_PASSWORD'),
+      database: config.get<string>('DB_DATABASE'),
+      autoLoadEntities: true,
+      synchronize: true,
     }),
+  }),
     RolesModule,
     UsersModule,
-
-    
     FarmerProfilesModule,
-
-    
     FarmingProjectsModule,
-
-    
     ProjectUpdatesModule,
-
-    
     HarvestsModule,
-
-
-
+    LandownerProfilesModule,
+    LandImagesModule,
+    LandsModule,
+    HiringRequestsModule,
+    ActivityLogsModule,
+    ReportsModule,
+    InvestorProfilesModule,
+    InvestmentsModule,
+    InvestmentTransactionsModule,
+    InvestmentReturnsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
