@@ -14,8 +14,13 @@ import { HarvestsModule } from './farmer/harvests/harvests.module.js';
 import { LandownerProfilesModule } from './landowner/landowner-profiles/landowner-profiles.module.js';
 import { LandImagesModule } from './landowner/land-images/land-images.module.js';
 import { LandsModule } from './landowner/lands/lands.module.js';
-import { HiringRequestsModule} from './landowner/hiring-requests/hiring-requests.module.js'
-
+import { HiringRequestsModule } from './landowner/hiring-requests/hiring-requests.module.js';
+import { ActivityLogsModule } from './activity-logs/activity-logs.module.js';
+import { ReportsModule } from './reports/reports.module.js';
+import { InvestorProfilesModule } from './investor-profiles/investor-profiles.module.js';
+import { InvestmentsModule } from './investments/investments.module.js';
+import { InvestmentTransactionsModule } from './investment-transactions/investment-transactions.module.js';
+import { InvestmentReturnsModule } from './investment-returns/investment-returns.module.js';
 
 @Module({
   imports: [ConfigModule.forRoot({ isGlobal: true, validate: validateEnv }),
@@ -44,6 +49,12 @@ import { HiringRequestsModule} from './landowner/hiring-requests/hiring-requests
     LandImagesModule,
     LandsModule,
     HiringRequestsModule,
+    ActivityLogsModule,
+    ReportsModule,
+    InvestorProfilesModule,
+    InvestmentsModule,
+    InvestmentTransactionsModule,
+    InvestmentReturnsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
