@@ -12,7 +12,7 @@ import {
 
 import { InvestorProfile } from '../../investor-profiles/entities/investor-profile.entity.js';
 
-import { FarmingProject } from '../../farming-projects/entities/farming-project.entity.js';
+import { FarmingProjects } from '../../farmer/farming_projects/entities/farming_projects.entity.js';
 
 import { InvestmentTransaction } from '../../investment-transactions/entities/investment-transaction.entity.js';
 
@@ -46,12 +46,12 @@ export class Investment {
   })
   projectId: number;
 
-  @ManyToOne(() => FarmingProject, {
+  @ManyToOne(() => FarmingProjects, {
     onDelete: 'RESTRICT',
     nullable: false,
   })
   @JoinColumn({ name: 'project_id' })
-  project: Relation<FarmingProject>;
+  project: Relation<FarmingProjects>;
 
   @Column({
     type: 'decimal',
