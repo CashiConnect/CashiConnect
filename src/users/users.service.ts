@@ -22,34 +22,27 @@ export class UsersService {
 
 
 
-  async findAll({ page, limit, role, status }: UserQueryDto) {
-    const [data, total] = await this.userRepository.findAndCount({
-      where: {
-        ...(status && { status }),
-        ...(role && { role: { name: role } }),
-      },
-      relations: { role: true },
-      select: {
-        id: true,
-        full_name: true,
-        email: true,
-        phone: true,
-        status: true,
-        created_at: true,
-        updated_at: true,
-        role: { id: true, name: true },
-      },
-      order: { id: 'ASC' },
-      skip: (page - 1) * limit,
-      take: limit,
-    });
-
-    return {
-      data,
-      meta: { total, page, limit, totalPages: Math.ceil(total / limit) },
-    };
-  }
-
+ async findAll({ role, status }: UserQueryDto) {
+  const data = await this.userRepository.find({
+    where: {
+      ...(status && { status }),
+      ...(role && { role: { name: role } }),
+    },
+    relations: { role: true },
+    select: {
+      id: true,
+      full_name: true, 
+      email: true, 
+      phone: true,
+      status: true, 
+      created_at: true, 
+      updated_at: true,
+      role: { id: true, name: true },
+    },
+    order: { id: 'ASC' },
+  });
+  return { total: data.length, data };
+}
 
 
   async updateStatus(id: number, dto: UpdateUserStatusDto, adminId: number) {
