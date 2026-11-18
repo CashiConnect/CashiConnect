@@ -6,7 +6,7 @@ import { FarmingProjects } from './entities/farming_projects.entity.js';
 import { FarmerProfile } from '../farmer_profiles/entities/farmer_profile.entity.js';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([FarmingProjects])],
+  imports: [TypeOrmModule.forFeature([FarmingProjects, FarmerProfile])],
   controllers: [FarmingProjectsController],
   providers: [FarmingProjectsService],
 })
