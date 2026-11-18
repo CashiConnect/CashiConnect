@@ -1,6 +1,5 @@
 import { Injectable, ConflictException, UnauthorizedException, BadRequestException, Logger,
  NotFoundException } from '@nestjs/common';
-
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from '../users/entities/user.entity.js';
@@ -24,7 +23,6 @@ export class AuthService {
     private roleRepository: Repository<Role>,
 
     private jwtService: JwtService,
-
     private readonly mailerService: MailerService,
   ) {}
 
@@ -104,9 +102,7 @@ export class AuthService {
   async login(dto: LoginDto) {
     const user = await this.userRepository.findOne({
       where: { email: dto.email },
-      relations: {
-        role: true,
-      },
+      relations: { role: true },
     });
 
     if (!user) {
@@ -115,10 +111,7 @@ export class AuthService {
       );
     }
 
-    const isPasswordMatched = await bcrypt.compare(
-      dto.password,
-      user.password,
-    );
+    const isPasswordMatched = await bcrypt.compare( dto.password, user.password );
 
     if (!isPasswordMatched) {
       throw new UnauthorizedException(
@@ -138,9 +131,7 @@ export class AuthService {
       role: user.role.name,
     };
 
-    const accessToken = await this.jwtService.signAsync(
-      payload,
-    );
+    const accessToken = await this.jwtService.signAsync( payload );
 
     return {
       message: 'Login successful',
