@@ -1,5 +1,7 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn, type Relation } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn, type Relation } from "typeorm";
 import {FarmerProfile} from "../../farmer_profiles/entities/farmer_profile.entity.js";
+import { Harvest } from "../../harvests/entities/harvests.entity.js";
+import { ProjectUpdates } from "../../project_updates/entities/project_update.entity.js";
 
 @Entity('farming_projects')
 export class FarmingProjects{
@@ -47,6 +49,20 @@ export class FarmingProjects{
 
   @UpdateDateColumn()
   updated_at: Date;
+
+ @OneToMany(
+  () => Harvest,
+  (harvest) => harvest.project,
+)
+harvests: Relation<Harvest[]>;
+
+
+
+@OneToMany(
+  () => ProjectUpdates,
+  (projectUpdate) => projectUpdate.project,
+)
+projectUpdates: Relation<ProjectUpdates[]>;
 
   @ManyToOne(()=>FarmerProfile
 ,(farmerProfile)=>farmerProfile.farmingProjects,{nullable:false,onDelete:'CASCADE'})
