@@ -12,7 +12,9 @@ import { FarmingProjectsModule } from './farmer/farming_projects/farming_project
 import { ProjectUpdatesModule } from './farmer/project_updates/project_updates.module.js';
 import { HarvestsModule } from './farmer/harvests/harvests.module.js';
 import { LandownerProfilesModule } from './landowner/landowner-profiles/landowner-profiles.module.js';
-
+import { LandImagesModule } from './landowner/land-images/land-images.module.js';
+import { LandsModule } from './landowner/lands/lands.module.js';
+import { HiringRequestsModule} from './landowner/hiring-requests/hiring-requests.module.js'
 
 
 @Module({
@@ -39,6 +41,9 @@ import { LandownerProfilesModule } from './landowner/landowner-profiles/landowne
     ProjectUpdatesModule,
     HarvestsModule,
     LandownerProfilesModule,
+    LandImagesModule,
+    LandsModule,
+    HiringRequestsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

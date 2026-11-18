@@ -4,9 +4,11 @@ import {Column,
         UpdateDateColumn,
         PrimaryGeneratedColumn,
         JoinColumn,
+        OneToMany,
         OneToOne,
         type Relation} from 'typeorm';
 import {User} from '../../../users/entities/user.entity.js';
+import {Land} from '../../lands/entities/land.entity.js';
 
 @Entity('landowner_profiles')
 export class LandownerProfile {
@@ -34,4 +36,7 @@ export class LandownerProfile {
 
     @UpdateDateColumn()
     updated_at: Date;
+
+    @OneToMany(() => Land, (land) => land.landownerProfile)
+    lands: Relation<Land[]>;
 }
