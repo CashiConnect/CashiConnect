@@ -3,10 +3,7 @@ import { ConflictException, ForbiddenException, Injectable, NotFoundException,
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Role } from './entities/roles.entity.js';
-import { User } from '../users/entities/user.entity.js';
 import { CreateRoleDto } from './dto/create-role.dto.js';
-import { UpdateRoleDto } from './dto/update-role.dto.js';
-import { PaginationQueryDto } from '../common/dto/pagination-query.dto.js';
 
 
 
@@ -27,19 +24,10 @@ export class RolesService {
   }
 
 
-  async findAll({ page, limit }: PaginationQueryDto) {
-    const [data, total] = await this.roleRepository.findAndCount({
-      order: { id: 'ASC' },
-      skip: (page - 1) * limit,
-      take: limit,
-    });
-
-    return {
-      data,
-      meta: { total, page, limit, totalPages: Math.ceil(total / limit) },
-    };
-  }
-
+   async findAll() {
+      const data = await this.roleRepository.find({ order: { id: 'ASC' } });
+      return { total: data.length, data };
+    }
 
 
   async findOne(id: number) {

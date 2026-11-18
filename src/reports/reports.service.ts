@@ -68,36 +68,31 @@ export class ReportsService {
   }
 
 
-  async findAll({ page, limit, status }: ReportQueryDto, userId: number, role: string) {
-    const isAdmin = role === APP_ROLES.ADMIN;
+  async findAll({ status }: ReportQueryDto, userId: number, role: string) {
+  const isAdmin = role === APP_ROLES.ADMIN;
 
-    const [data, total] = await this.reportRepository.findAndCount({
-      where: {
-        ...(status && { status }),
-        ...(!isAdmin && { reporter: { id: userId } }),
-      },
-      relations: { reporter: true, reported_user: true, project: true },
-      select: {
-        id: true,
-        subject: true,
-        description: true,
-        status: true,
-        admin_note: true,
-        created_at: true,
-        reporter: { id: true, full_name: true },
-        reported_user: { id: true, full_name: true },
-        project: { id: true },
-      },
-      order: { id: 'DESC' },
-      skip: (page - 1) * limit,
-      take: limit,
-    });
+  const data = await this.reportRepository.find({
+    where: {
+      ...(status && { status }),
+      ...(!isAdmin && { reporter: { id: userId } }),
+    },
+    relations: { reporter: true, reported_user: true, project: true },
+    select: {
+      id: true, 
+      subject: true, 
+      description: true, 
+      status: true,
+      admin_note: true, 
+      created_at: true,
+      reporter: { id: true, full_name: true },
+      reported_user: { id: true, full_name: true },
+      project: { id: true },
+    },
+    order: { id: 'DESC' },
+  });
 
-    return {
-      data,
-      meta: { total, page, limit, totalPages: Math.ceil(total / limit) },
-    };
-  }
+  return { total: data.length, data };
+}
 
   
   async updateStatus(id: number, dto: UpdateReportStatusDto) {

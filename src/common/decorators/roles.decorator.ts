@@ -9,10 +9,21 @@ export const APP_ROLES = {
   LANDOWNER: 'Landowner',
 } as const;
 
-export type AppRole = (typeof APP_ROLES)[keyof typeof APP_ROLES];
 
-export const Roles = (...roles: AppRole[]) => SetMetadata(ROLES_KEY, roles);
+export type AppRole = 'Admin' | 'Farmer' | 'Investor' | 'Landowner';
 
-export const FarmerOnly = () => Roles(APP_ROLES.FARMER);
+export function Roles(...roles: AppRole[]) {
+  return SetMetadata(ROLES_KEY, roles);
+}
 
-export const LandownerOnly = () => Roles(APP_ROLES.LANDOWNER);
+export function FarmerOnly() {
+  return Roles(APP_ROLES.FARMER);
+}
+
+export function LandownerOnly() {          // @Roles('Landowner')   
+  return Roles(APP_ROLES.LANDOWNER);
+}
+
+export function InvestorOnly() {
+  return Roles(APP_ROLES.INVESTOR);
+}
