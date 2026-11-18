@@ -107,7 +107,7 @@ export class ReportsService {
       throw new NotFoundException(`Report with id ${id} not found`);
     }
 
-    if (report.status === 'resolved' || report.status === 'rejected') {
+    if (report.status === 'solved' || report.status === 'rejected') {
       throw new ConflictException(`Report is already ${report.status}`);
     }
 
